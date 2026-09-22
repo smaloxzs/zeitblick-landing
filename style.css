@@ -87,13 +87,52 @@ a { color: inherit; text-decoration: none; }
 /* ── Top-Banner ── */
 
 .top-banner {
-  background: linear-gradient(90deg, #1a1030, #0f1830);
-  color: #cfd3ff;
-  text-align: center;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 13px;
-  padding: 9px 16px;
-  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+  padding: 10px 44px;
+  position: relative;
 }
+.top-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.top-banner-badge {
+  background: rgba(255, 255, 255, 0.22);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.top-banner a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.top-banner-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 6px;
+}
+.top-banner-close:hover { color: #fff; }
 
 /* ── Header ── */
 
