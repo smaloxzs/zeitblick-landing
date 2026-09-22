@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 </head>
 <body>
 
@@ -438,13 +439,22 @@
               <li>✓ Alle zukünftigen Funktionen inklusive</li>
             </ul>
 
-            <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-solid" style="width:100%;margin-bottom:14px">⬇ Kostenlos herunterladen</a>
+            <!--
+              Lemon Squeezy Checkout-Button: Sobald in Lemon Squeezy ein Store +
+              ein Abo-Produkt "Zeitblick" (5 €/Monat, 7 Tage Trial) angelegt ist,
+              den href unten durch den echten Checkout-Link aus dem Lemon-Squeezy-
+              Dashboard ersetzen (Produkt -> Share -> Checkout-Link kopieren).
+              Das Skript oben (lemon.js) faengt Klicks auf diesen Link automatisch
+              ab und oeffnet ein Checkout-Overlay, ohne die Seite zu verlassen.
+            -->
+            <a href="https://REPLACE-DEIN-SHOP.lemonsqueezy.com/buy/REPLACE-PRODUKT-ID?embed=1&media=0"
+               class="btn btn-pill-solid lemonsqueezy-button" style="width:100%;margin-bottom:10px">
+              🔒 Jetzt abonnieren – 5 €/Monat
+            </a>
 
-            <form class="waitlist-form" id="waitlistForm">
-              <input type="email" id="waitlistEmail" placeholder="deine@email.de" required>
-              <button type="submit" class="btn btn-pill-ghost">Update-Infos</button>
-            </form>
-            <p class="waitlist-note" id="waitlistNote">Für Neuigkeiten zum Bezahlmodell. Öffnet eine E-Mail an uns, kein automatischer Versand deiner Adresse an Dritte.</p>
+            <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-ghost" style="width:100%;margin-bottom:14px">⬇ Nur herunterladen (Beta, kostenlos)</a>
+
+            <p class="waitlist-note">Zahlung über Lemon Squeezy, sicher per Kreditkarte/PayPal. Rechnung und Kündigung laufen automatisch über dein Kundenkonto dort.</p>
           </div>
         </div>
       </div>
