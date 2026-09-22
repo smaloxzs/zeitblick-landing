@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeitblick – Automatisches Zeittracking für dich</title>
+  <meta name="description" content="Zeitblick trackt automatisch jede App, jedes Spiel und jede Website und zeigt dir, wohin deine Zeit wirklich geht. Kein Timer, keine Screenshots, 100 % privat.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-banner">
+    🚧 Zeitblick ist in aktiver Entwicklung — jetzt kostenlos herunterladen und 7 Tage testen
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">◔</span>
+        <span class="logo-text">Zeitblick</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#funktionen">Funktionen</a>
+        <a href="#vorschau">Vorschau</a>
+        <a href="#fuerdich">Für dich</a>
+        <a href="#privatsphaere">Privatsphäre</a>
+        <a href="#preise">Preise</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-light btn-small">⬇ Download</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ Hero ══════════ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner-stack">
+        <span class="eyebrow center">Automatisches Zeittracking</span>
+        <h1 class="center">Sieh endlich, wohin<br>deine Zeit wirklich geht.</h1>
+        <p class="hero-sub center">
+          Zeitblick läuft leise im Hintergrund und zeichnet automatisch auf, welche
+          Programme, Spiele und Websites du nutzt. Kein Timer zum Starten, keine
+          Screenshots, keine Überwachung. Nur ein ehrliches Bild deines Tages.
+        </p>
+        <div class="hero-actions center">
+          <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-light btn-large">⬇ Kostenlos herunterladen</a>
+          <a href="#vorschau" class="btn btn-pill-ghost btn-large">Automatisches Tracking ansehen</a>
+        </div>
+        <p class="hero-note center">7 Tage kostenlos testen · keine Kreditkarte nötig · für Windows · Deutsch &amp; English</p>
+
+        <div class="chip-row" id="fuerdich-chips">
+          <a href="#fuerdich" class="chip">Für Studierende</a>
+          <a href="#fuerdich" class="chip">Für Freelancer</a>
+          <a href="#fuerdich" class="chip">Für Gamer</a>
+          <a href="#fuerdich" class="chip">Für Remote-Arbeit</a>
+          <a href="#fuerdich" class="chip">Für mehr Fokus</a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="browser-card">
+            <div class="browser-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="browser-url">zeitblick.app</span>
+            </div>
+            <div class="browser-body">
+              <div class="mini-week" role="img" aria-label="Beispielhafte Wochenübersicht nach Kategorien">
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:14%;background:var(--cat-produktiv)"></span>
+                  <span style="height:10%;background:var(--cat-kommunikation)"></span>
+                  <span style="height:30%;background:var(--cat-gaming)"></span>
+                </div><b>Mo</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:22%;background:var(--cat-produktiv)"></span>
+                  <span style="height:8%;background:var(--cat-browsing)"></span>
+                  <span style="height:12%;background:var(--cat-sozial)"></span>
+                </div><b>Di</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:30%;background:var(--cat-produktiv)"></span>
+                  <span style="height:6%;background:var(--cat-lernen)"></span>
+                  <span style="height:8%;background:var(--cat-kommunikation)"></span>
+                </div><b>Mi</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:12%;background:var(--cat-produktiv)"></span>
+                  <span style="height:10%;background:var(--cat-sozial)"></span>
+                  <span style="height:22%;background:var(--cat-unterhaltung)"></span>
+                </div><b>Do</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:18%;background:var(--cat-produktiv)"></span>
+                  <span style="height:36%;background:var(--cat-gaming)"></span>
+                </div><b>Fr</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:8%;background:var(--cat-design)"></span>
+                  <span style="height:40%;background:var(--cat-gaming)"></span>
+                  <span style="height:10%;background:var(--cat-sozial)"></span>
+                </div><b>Sa</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:16%;background:var(--cat-unterhaltung)"></span>
+                  <span style="height:14%;background:var(--cat-sozial)"></span>
+                  <span style="height:10%;background:var(--cat-kommunikation)"></span>
+                </div><b>So</b></div>
+              </div>
+              <div class="mini-stats">
+                <div class="mini-donut" style="background: conic-gradient(
+                  var(--cat-produktiv) 0% 34%,
+                  var(--cat-gaming) 34% 58%,
+                  var(--cat-unterhaltung) 58% 76%,
+                  var(--cat-sozial) 76% 90%,
+                  var(--cat-design) 90% 100%)">
+                  <div class="mini-donut-hole">
+                    <b>32 Std.</b>
+                    <span>diese Woche</span>
+                  </div>
+                </div>
+                <div class="mini-legend">
+                  <div><span class="dot" style="background:var(--cat-produktiv)"></span>Produktivität<b>34 %</b></div>
+                  <div><span class="dot" style="background:var(--cat-gaming)"></span>Gaming<b>24 %</b></div>
+                  <div><span class="dot" style="background:var(--cat-unterhaltung)"></span>Unterhaltung<b>18 %</b></div>
+                  <div><span class="dot" style="background:var(--cat-sozial)"></span>Soziale Medien<b>14 %</b></div>
+                  <div><span class="dot" style="background:var(--cat-design)"></span>Design<b>10 %</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="visual-caption center">Beispielansicht — bei dir zeigt Zeitblick natürlich deine echten Kategorien</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Mini-Teaser ══════════ -->
+    <div class="teaser-bar">
+      <div class="container teaser-inner">
+        <div>
+          <span class="eyebrow">Aus der Entwicklung</span>
+          <p>Neu: ein eingebauter Fokus-Timer mit echter Ablenkungssperre. Zeitblick wächst laufend weiter.</p>
+        </div>
+        <a href="#roadmap" class="btn btn-pill-ghost btn-small">Roadmap ansehen</a>
+      </div>
+    </div>
+
+    <!-- ══════════ Trust-Leiste ══════════ -->
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div><b>100 %</b><span>automatisch, kein Timer</span></div>
+        <div><b>0</b><span>Screenshots oder Keylogging</span></div>
+        <div><b>&lt; 5 Min.</b><span>Einrichtung</span></div>
+        <div><b>10</b><span>Kategorien automatisch erkannt</span></div>
+      </div>
+    </section>
+
+    <!-- ══════════ Founder-Zitat ══════════ -->
+    <section class="quote-section">
+      <div class="container center">
+        <span class="eyebrow center">Warum Zeitblick entsteht</span>
+        <blockquote>
+          „Ich wollte einfach selbst sehen, wohin mein Tag verschwindet, ohne
+          irgendetwas manuell eintragen zu müssen. Also habe ich es gebaut, für
+          mich. Zeitblick ist jetzt so weit, dass ich es niemandem mehr vorenthalten will.“
+        </blockquote>
+        <div class="quote-author">
+          <span class="avatar-initial">MP</span>
+          <div>
+            <b>Marlon Pilz</b>
+            <span>Entwickler von Zeitblick</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Download-artige Zwischen-CTA ══════════ -->
+    <section class="section download-cta">
+      <div class="container center">
+        <h2 class="section-title">Bereit, deine Zeit zu sehen?</h2>
+        <p class="section-sub">Eine Datei, ein Doppelklick, fertig installiert. Läuft komplett lokal auf deinem PC.</p>
+        <div class="hero-actions center">
+          <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-light btn-large">⬇ Zeitblick herunterladen</a>
+          <a href="mailto:smalox.der.beste@gmail.com?subject=Frage%20zu%20Zeitblick" class="btn btn-pill-ghost btn-large">Frage stellen</a>
+        </div>
+        <p class="hero-note">Aktuell für Windows verfügbar · keine Kreditkarte nötig</p>
+      </div>
+    </section>
+
+    <!-- ══════════ Problem ══════════ -->
+    <section class="section" id="problem">
+      <div class="container">
+        <span class="eyebrow center">Das Problem</span>
+        <h2 class="section-title center">Deine Zeit verschwindet, und du weißt nicht wohin.</h2>
+        <div class="stacked-list">
+          <div class="stacked-card">
+            <span class="stacked-num">01</span>
+            <h3>Der Tag ist einfach weg</h3>
+            <p>Zwischen Arbeit, ein paar Browser-Tabs und kurzen Ablenkungen verlierst du komplett den Überblick, wie viel Zeit wofür wirklich draufgeht.</p>
+            <a href="#vorschau" class="link-arrow">Sieh dir ein Beispiel an →</a>
+          </div>
+          <div class="stacked-card">
+            <span class="stacked-num">02</span>
+            <h3>Timer scheitern an dir selbst</h3>
+            <p>Manuell starten und stoppen funktioniert genau so lange, bis du es einmal vergisst. Danach sind die Daten wertlos, und du fängst wieder bei null an.</p>
+            <a href="#funktionen" class="link-arrow">So läuft automatisches Tracking →</a>
+          </div>
+          <div class="stacked-card">
+            <span class="stacked-num">03</span>
+            <h3>Überwachung fühlt sich falsch an</h3>
+            <p>Die meisten Tracking-Tools sind für Chefs gebaut: Screenshots, Keylogging, ständige Kontrolle. Du willst nur für dich selbst Klarheit, keine Überwachung.</p>
+            <a href="#privatsphaere" class="link-arrow">Wie Zeitblick deine Privatsphäre schützt →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Lösung ══════════ -->
+    <section class="section section-alt" id="funktionen">
+      <div class="container">
+        <span class="eyebrow center">Die Lösung</span>
+        <h2 class="section-title center">Automatisches Zeittracking, dem du vertraust</h2>
+        <p class="section-sub center">Weniger Aufwand, mehr Klarheit, Daten, auf die du dich verlassen kannst, ohne wie du arbeitest zu verändern.</p>
+
+        <div class="stacked-list">
+          <div class="stacked-card">
+            <h3>Vollautomatisches, privates Tracking</h3>
+            <p>Zeitblick erkennt im Hintergrund, welches Programm oder welche Website gerade aktiv ist, alle 5 Sekunden, ganz ohne dein Zutun und ohne dass etwas dein Gerät verlässt.</p>
+            <a href="#vorschau" class="link-arrow">Live-Vorschau ansehen →</a>
+          </div>
+          <div class="stacked-card">
+            <h3>Smarte Kategorien & Website-Erkennung</h3>
+            <p>Über 10 Kategorien, von Produktivität über Gaming bis Soziale Medien, ordnen jede Aktivität automatisch richtig ein, inklusive einzelner Websites im Browser.</p>
+            <a href="#fuerdich" class="link-arrow">Für wen sich das lohnt →</a>
+          </div>
+          <div class="stacked-card">
+            <h3>Auswertung ohne Ende-des-Tages-Sortieren</h3>
+            <p>Wochenkalender im Google-Kalender-Stil sowie Balken-, Kreisdiagramme und Top-Listen für Tag, Woche und Monat, alles fertig, sobald du nachschaust.</p>
+            <a href="#preise" class="link-arrow">Preise ansehen →</a>
+          </div>
+        </div>
+
+        <div class="card-grid three feature-grid">
+          <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <h3>100 % privat, 100 % lokal</h3>
+            <p>Alle Daten bleiben auf deinem eigenen Gerät. Kein Account-Zwang, keine Cloud.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>Eigene Kategorien</h3>
+            <p>Jedes Programm und jede Website lässt sich per Klick neu einsortieren.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>Läuft einfach mit</h3>
+            <p>Startet automatisch mit Windows und läuft unsichtbar im Hintergrund.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Live-Vorschau ══════════ -->
+    <section class="section" id="vorschau">
+      <div class="container">
+        <span class="eyebrow center">Live-Vorschau</span>
+        <h2 class="section-title center">So sieht dein Tag aus, bevor du überhaupt nachdenkst.</h2>
+        <p class="section-sub center">Kein Eintragen, kein Nachtragen am Abend. Jeder Block entsteht von selbst, während du ganz normal arbeitest, lernst oder spielst.</p>
+
+        <div class="preview-card">
+          <div class="browser-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="browser-url">zeitblick.app · Freitag</span>
+          </div>
+          <div class="cal-preview">
+            <div class="cal-axis">
+              <span style="top:0%">20:00</span>
+              <span style="top:25%">16:00</span>
+              <span style="top:50%">12:00</span>
+              <span style="top:75%">08:00</span>
+            </div>
+            <div class="cal-days" role="img" aria-label="Beispielhafter Tagesablauf mit farbigen Kategorie-Blöcken">
+              <div class="cal-col">
+                <span class="blk" style="top:70%;height:18%;background:var(--cat-produktiv)">Code Editor</span>
+                <span class="blk" style="top:52%;height:14%;background:var(--cat-kommunikation)">Discord</span>
+                <span class="blk" style="top:20%;height:28%;background:var(--cat-gaming)">Valorant</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:66%;height:24%;background:var(--cat-produktiv)">VS Code</span>
+                <span class="blk" style="top:38%;height:10%;background:var(--cat-browsing)">GitHub</span>
+                <span class="blk" style="top:10%;height:18%;background:var(--cat-unterhaltung)">Spotify</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:60%;height:30%;background:var(--cat-lernen)">Udemy-Kurs</span>
+                <span class="blk" style="top:30%;height:16%;background:var(--cat-sozial)">Instagram</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:68%;height:20%;background:var(--cat-produktiv)">Excel</span>
+                <span class="blk" style="top:15%;height:36%;background:var(--cat-gaming)">Apex Legends</span>
+              </div>
+              <div class="cal-col cal-col-today">
+                <span class="blk" style="top:74%;height:16%;background:var(--cat-produktiv)">Zeitblick</span>
+                <span class="blk" style="top:48%;height:12%;background:var(--cat-design)">Figma</span>
+                <span class="blk" style="top:18%;height:22%;background:var(--cat-sozial)">TikTok</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:20%;height:50%;background:var(--cat-gaming)">Gaming-Abend</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:40%;height:20%;background:var(--cat-unterhaltung)">Netflix</span>
+                <span class="blk" style="top:15%;height:18%;background:var(--cat-kommunikation)">WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="visual-caption center">Beispielansicht — jeder Block wird automatisch erkannt, benannt und eingefärbt</p>
+      </div>
+    </section>
+
+    <!-- ══════════ Für wen (Personas) ══════════ -->
+    <section class="section section-alt" id="fuerdich">
+      <div class="container">
+        <span class="eyebrow center">Für wen ist das genau richtig?</span>
+        <h2 class="section-title center">Das hier ist perfekt für dich, wenn …</h2>
+        <p class="section-sub center">Zeitblick ist für Einzelpersonen gebaut, nicht für Teams. Wenn du selbst wissen willst, wohin deine Zeit geht, bist du hier richtig.</p>
+
+        <div class="stacked-list">
+          <div class="stacked-card">
+            <h3>Studierende</h3>
+            <p>Sieh, wie viel Zeit wirklich in Vorlesungen, Lernen und Ablenkung fließt, ganz ohne selbst Buch zu führen. Ideal vor Prüfungsphasen, um ehrlich zu bewerten, wo du stehst.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Freelancer & Selbstständige</h3>
+            <p>Schluss mit Rätselraten, wie lange ein Projekt wirklich gedauert hat. Zeitblick läuft leise mit, damit du genauer kalkulieren und deinen Tag realistisch einschätzen kannst.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Gamer & Streamer</h3>
+            <p>Erkennt einzelne Spiele automatisch, inklusive Launcher und Anti-Cheat-Begleitprozesse. So siehst du schwarz auf weiß, wie sich Gaming und produktive Zeit die Waage halten.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Remote-Arbeiter im Homeoffice</h3>
+            <p>Ohne Büro und feste Struktur verschwimmen Arbeits- und Freizeit schnell. Zeitblick macht sichtbar, wann du wirklich fokussiert warst und wann nicht.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Alle, die mehr Fokus wollen</h3>
+            <p>Manchmal reicht es schon, ehrlich zu sehen, wie viel Zeit Social Media & Co. wirklich fressen. Das allein verändert oft schon, wie du deinen Tag gestaltest.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Privatsphäre ══════════ -->
+    <section class="privacy-section" id="privatsphaere">
+      <div class="container">
+        <span class="eyebrow center light">Privatsphäre zuerst</span>
+        <h2 class="section-title center light">Sichtbarkeit ohne Überwachung.<br>Klarheit ohne Kontrolle.</h2>
+
+        <div class="privacy-grid">
+          <div class="privacy-card">
+            <div class="privacy-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Keine Screenshots, kein Keylogging</h3>
+            <p>Zeitblick liest ausschließlich Fenster-Metadaten: Programmname und Fenstertitel. Kein Bildschirminhalt wird je aufgezeichnet oder gespeichert.</p>
+          </div>
+          <div class="privacy-card">
+            <div class="privacy-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/></svg>
+            </div>
+            <h3>Alle Daten bleiben bei dir</h3>
+            <p>Kein Cloud-Zwang, kein Account-Login für deine Tracking-Daten. Alles liegt lokal auf deinem eigenen Gerät, niemand sonst sieht es.</p>
+          </div>
+          <div class="privacy-card">
+            <div class="privacy-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3>Gebaut, damit du es nutzen willst</h3>
+            <p>Zeitblick ist kein Kontrollwerkzeug. Es funktioniert nur, weil es dir selbst hilft, deine Zeit besser zu verstehen, nicht weil es dich überwacht.</p>
+          </div>
+        </div>
+
+        <div class="chip-row center">
+          <a href="#faq" class="chip chip-light">Mehr zum Datenschutz</a>
+          <a href="#funktionen" class="chip chip-light">So funktioniert das Tracking</a>
+          <a href="#preise" class="chip chip-light">Preise ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Roadmap ══════════ -->
+    <section class="section" id="roadmap">
+      <div class="container">
+        <span class="eyebrow center">Was als Nächstes kommt</span>
+        <h2 class="section-title center">Zeitblick wächst weiter.</h2>
+        <div class="card-grid three">
+          <div class="roadmap-card">
+            <span class="badge-soon">✓ Bereits verfügbar</span>
+            <h3>🎯 Fokus-Timer</h3>
+            <p>Ein eingebauter Pomodoro-Modus: 25, 45, 60 oder 90 Minuten fokussiert arbeiten. Ablenkende Apps und Websites werden während der Sitzung automatisch minimiert, inklusive kurzer Erinnerung und Pausen-Vorschlag danach.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="badge-soon">✓ Bereits verfügbar</span>
+            <h3>⬇️ Ein Klick, immer aktuell</h3>
+            <p>Eine einzelne Datei herunterladen, öffnen, fertig installiert, inklusive Verknüpfung und Eintrag zum Deinstallieren. Zeitblick prüft beim Start automatisch, ob eine neuere Version bereitsteht.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="badge-soon">Auf der Liste</span>
+            <h3>🖥️ macOS-Unterstützung</h3>
+            <p>Aktuell läuft Zeitblick auf Windows. Eine macOS-Version ist in Planung, sobald Windows rund läuft.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Preise ══════════ -->
+    <section class="section section-alt" id="preise">
+      <div class="container">
+        <span class="eyebrow center">Preise</span>
+        <h2 class="section-title center">Ein Plan. Kein Kleingedrucktes.</h2>
+        <p class="section-sub center">Zeitblick ist gerade im Aufbau. Lade es jetzt kostenlos herunter und sei von Anfang an dabei.</p>
+
+        <div class="pricing-wrap">
+          <div class="pricing-card">
+            <span class="badge-soon">🚀 Early Access</span>
+            <h3>Zeitblick</h3>
+            <div class="price"><span class="price-amount">5 €</span><span class="price-period">/ Monat</span></div>
+            <p class="price-note">7 Tage kostenlos testen, danach jederzeit kündbar</p>
+            <ul class="price-features">
+              <li>✓ Unbegrenztes automatisches Tracking</li>
+              <li>✓ Alle 10 Kategorien inkl. Website-Erkennung</li>
+              <li>✓ Kalender-, Tages-, Wochen- und Monatsansicht</li>
+              <li>✓ Fokus-Modus mit Ablenkungssperre</li>
+              <li>✓ 100 % lokale, private Daten</li>
+              <li>✓ Alle zukünftigen Funktionen inklusive</li>
+            </ul>
+
+            <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-solid" style="width:100%;margin-bottom:14px">⬇ Kostenlos herunterladen</a>
+
+            <form class="waitlist-form" id="waitlistForm">
+              <input type="email" id="waitlistEmail" placeholder="deine@email.de" required>
+              <button type="submit" class="btn btn-pill-ghost">Update-Infos</button>
+            </form>
+            <p class="waitlist-note" id="waitlistNote">Für Neuigkeiten zum Bezahlmodell. Öffnet eine E-Mail an uns, kein automatischer Versand deiner Adresse an Dritte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <h2 class="section-title center">Häufige Fragen</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Werden Screenshots von meinem Bildschirm gemacht?<span class="chev"></span></summary>
+            <p>Nein. Zeitblick liest ausschließlich Fenster-Metadaten, also den Programmnamen und den Fenstertitel. Es gibt keine Screenshots, kein Keylogging und keine Bildschirmaufnahme, weder gespeichert noch übertragen.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wo landen meine Daten?<span class="chev"></span></summary>
+            <p>Ausschließlich lokal auf deinem eigenen Gerät. Es gibt keine Cloud-Anbindung und keinen Account-Zwang für deine Tracking-Daten. Niemand außer dir sieht, was du wann gemacht hast.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Läuft Zeitblick auch auf dem Mac?<span class="chev"></span></summary>
+            <p>Aktuell ist Zeitblick für Windows gebaut. Eine macOS-Version steht auf der Roadmap, sobald die Windows-Version rund läuft.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Kann ich jederzeit kündigen?<span class="chev"></span></summary>
+            <p>Ja, jederzeit und ohne Mindestlaufzeit. Nach der Kündigung bleiben deine bereits erfassten Daten lokal auf deinem Gerät bestehen.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wie genau ist das Tracking wirklich?<span class="chev"></span></summary>
+            <p>Zeitblick prüft alle 5 Sekunden, welches Fenster aktiv ist, und erkennt automatisch Leerlaufzeiten ab 3 Minuten ohne Maus- oder Tastatureingabe. Für den Alltag ist das genau genug, ohne dich mit Detailgenauigkeit auf die Sekunde zu belasten.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Was, wenn mir eine Kategorie nicht passt?<span class="chev"></span></summary>
+            <p>Jedes Programm und jede Website lässt sich per Klick in eine andere Kategorie verschieben. Deine Anpassung gilt sofort und dauerhaft.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Finale CTA ══════════ -->
+    <section class="final-cta">
+      <div class="container center">
+        <h2>Deine Zeit ist dein wertvollstes<br>Gut. Behandle sie auch so.</h2>
+        <p>Lade Zeitblick jetzt kostenlos herunter und probier es 7 Tage in Ruhe aus.</p>
+        <div class="hero-actions center">
+          <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.0/Zeitblick.exe" class="btn btn-pill-light btn-large">⬇ Kostenlos herunterladen</a>
+          <a href="mailto:smalox.der.beste@gmail.com?subject=Frage%20zu%20Zeitblick" class="btn btn-pill-ghost btn-large">Frage stellen</a>
+        </div>
+        <div class="final-links">
+          <a href="#funktionen">Funktionen ansehen</a>
+          <a href="#vorschau">Live-Vorschau</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">◔</span>
+          <span class="logo-text">Zeitblick</span>
+        </a>
+        <p>Automatisches, privates Zeittracking für Windows.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produkt</h4>
+        <a href="#funktionen">Funktionen</a>
+        <a href="#vorschau">Live-Vorschau</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#preise">Preise</a>
+      </div>
+      <div class="footer-col">
+        <h4>Für dich</h4>
+        <a href="#fuerdich">Für wen es passt</a>
+        <a href="#privatsphaere">Privatsphäre</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-copy">&copy; 2026 Marlon Pilz · Zeitblick</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
