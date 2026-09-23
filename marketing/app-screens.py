@@ -6,12 +6,15 @@ Fenstertitel) und fotografiert sie per headless Edge. Ergebnis in screens/:
 app-week-de/en.png (Kalender) und app-stats-de/en.png (Statistik).
 
 Aufruf: python app-screens.py   (danach render-ads.cmd fuer die X-Bilder)
+Demo zum Filmen: python app-screens.py --demo [en]  (oeffnet die App mit den
+Beispieldaten als eigenes Fenster, z. B. fuer eine Aufnahme mit Win+Alt+R)
 """
 import json
 import os
 import random
 import shutil
 import subprocess
+import sys
 import tempfile
 from datetime import datetime, timedelta
 
@@ -156,6 +159,15 @@ def main():
                 json.dump(day, f)
 
         url = "file:///" + work.replace("\\", "/") + "/index.html"
+        if "--demo" in sys.argv:
+            lang = "en" if "en" in sys.argv else "de"
+            subprocess.Popen([
+                EDGE, "--allow-file-access-from-files", "--window-size=1600,1000",
+                f"--user-data-dir={os.path.join(work, 'profile-demo')}",
+                f"--app={url}?lang={lang}&view=kalender",
+            ])
+            input("Demo laeuft (Beispieldaten). Fenster schliessen, dann hier Enter druecken ...")
+            return
         for lang in ("de", "en"):
             for view, name in (("kalender", "week"), ("statistik", "stats")):
                 target = os.path.join(OUT, f"app-{name}-{lang}.png")
