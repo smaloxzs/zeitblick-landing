@@ -570,6 +570,77 @@ a { color: inherit; text-decoration: none; }
 .subpage-main .btn { padding: 12px 26px; font-size: 15px; margin: 4px 0; }
 .faq-item p a { color: var(--accent2); text-decoration: underline; text-underline-offset: 2px; }
 
+/* ── Danke-Seite nach dem Kauf ── */
+
+.ty-main { padding: 70px 0 100px; }
+.container.ty-wrap { max-width: 760px; }
+.ty-hero { text-align: center; margin-bottom: 40px; }
+.ty-check {
+  width: 72px; height: 72px;
+  margin: 0 auto 24px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  box-shadow: 0 0 0 8px #7c5cff1f, 0 18px 40px -12px #7c5cff88;
+}
+.ty-hero h1 { font-size: 36px; letter-spacing: -0.3px; margin-bottom: 14px; }
+.ty-sub { color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 560px; margin: 0 auto; }
+
+.ty-download {
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 0 1px #7c5cff33, 0 30px 70px -30px #7c5cff55;
+  border-radius: 18px;
+  padding: 34px 30px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+.ty-download h2 { font-size: 22px; margin-bottom: 6px; }
+.ty-meta { color: var(--muted); font-size: 13.5px; margin-bottom: 22px; }
+
+.ty-section-title { font-size: 20px; text-align: center; margin-bottom: 22px; }
+.ty-steps { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+.ty-steps li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+}
+.ty-num {
+  flex: 0 0 34px;
+  height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #7c5cff22;
+  border: 1px solid #7c5cff55;
+  color: #b6a4ff;
+  font-weight: 700;
+  font-size: 15px;
+}
+.ty-steps h3 { font-size: 16px; margin: 5px 0 6px; }
+.ty-steps p, .ty-info p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.ty-steps strong, .ty-info strong { color: #d7dae4; }
+
+.ty-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 36px; }
+.ty-info { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
+.ty-info .feature-icon { margin-bottom: 14px; }
+.ty-info h3 { font-size: 16px; margin-bottom: 8px; }
+.ty-info a, .ty-back a { color: var(--accent2); }
+.ty-back { text-align: center; font-size: 14px; }
+
+@media (max-width: 640px) {
+  .ty-main { padding: 48px 0 80px; }
+  .ty-hero h1 { font-size: 28px; }
+  .ty-download { padding: 28px 18px; }
+  .ty-info-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 900px) {

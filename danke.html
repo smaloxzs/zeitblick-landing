@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -21,29 +21,60 @@
     </div>
   </header>
 
-  <main class="subpage-main">
-    <div class="container narrow">
-      <h1>🎉 Willkommen bei Zeitblick!</h1>
-      <p>Dein Abo ist eingerichtet. Die ersten 7 Tage sind kostenlos, erst danach werden 10 € für das erste Jahr abgebucht. Eine Bestätigung samt Rechnung bekommst du per E-Mail von Link, dem Bezahldienst von Stripe.</p>
+  <main class="ty-main">
+    <div class="container ty-wrap">
 
-      <h2>Jetzt herunterladen</h2>
-      <p>Ein Klick, dann installiert sich Zeitblick selbst — inklusive Verknüpfung, Autostart und Deinstallieren-Eintrag.</p>
-      <p>
-        <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.5/Zeitblick.exe" class="btn btn-pill-solid">⬇ Zeitblick.exe herunterladen</a>
-      </p>
-      <p class="price-note">
-        Weil die Datei neu und noch nicht kostenpflichtig signiert ist, warnen manche
-        Browser beim Download („wird nicht häufig heruntergeladen“). Dann auf
-        „Behalten“ bzw. „Trotzdem herunterladen“ klicken. Beim ersten Start zeigt
-        Windows eventuell „Windows hat Ihren PC geschützt“: auf „Weitere Informationen“
-        und dann „Trotzdem ausführen“ klicken. Beides ist keine echte Bedrohung.
-      </p>
+      <div class="ty-hero">
+        <div class="ty-check" aria-hidden="true">✓</div>
+        <h1>Willkommen bei Zeitblick!</h1>
+        <p class="ty-sub">Dein Abo ist eingerichtet. Die ersten 7 Tage sind kostenlos, erst danach werden 10 € für das erste Jahr abgebucht. Die Bestätigung samt Rechnung kommt per E-Mail von Link, dem Bezahldienst von Stripe.</p>
+      </div>
 
-      <h2>Fragen oder Probleme?</h2>
-      <p>Schreib einfach an <a href="mailto:smalox.der.beste@gmail.com">smalox.der.beste@gmail.com</a>.</p>
-      <p>Rechnungen und Kündigung verwaltest du selbst unter <a href="https://app.link.com" target="_blank" rel="noopener">app.link.com</a>, mit der E-Mail-Adresse, die du beim Kauf angegeben hast. Kündigst du innerhalb der ersten 7 Tage, zahlst du gar nichts. Eine Schritt-für-Schritt-Anleitung findest du unter <a href="kuendigen.html">Abo kündigen</a>.</p>
+      <div class="ty-download">
+        <h2>Zeitblick herunterladen</h2>
+        <p class="ty-meta">Für Windows 10 und 11 · ca. 9 MB · eine einzige Datei</p>
+        <a href="https://github.com/smaloxzs/zeitblick/releases/download/v1.1.5/Zeitblick.exe" class="btn btn-pill-solid btn-large">⬇ Zeitblick.exe herunterladen</a>
+      </div>
 
-      <p><a href="index.html" class="back-link">← Zurück zur Startseite</a></p>
+      <h2 class="ty-section-title">So geht's weiter</h2>
+      <ol class="ty-steps">
+        <li>
+          <span class="ty-num">1</span>
+          <div>
+            <h3>Datei speichern</h3>
+            <p>Manche Browser warnen beim Download mit „wird nicht häufig heruntergeladen“. Dann einfach auf <strong>„Behalten“</strong> bzw. <strong>„Trotzdem herunterladen“</strong> klicken. Die Datei ist nur neu und noch nicht kostenpflichtig signiert, keine echte Bedrohung.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ty-num">2</span>
+          <div>
+            <h3>Installieren</h3>
+            <p>Doppelklick auf <strong>Zeitblick.exe</strong>. Zeigt Windows „Windows hat Ihren PC geschützt“, auf <strong>„Weitere Informationen“</strong> und dann <strong>„Trotzdem ausführen“</strong> klicken. Zeitblick installiert sich dann selbst, inklusive Desktop-Icon und Autostart.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ty-num">3</span>
+          <div>
+            <h3>Loslegen</h3>
+            <p>Das Dashboard öffnet sich automatisch, ab jetzt trackt Zeitblick im Hintergrund. Den <strong>Fokus-Modus</strong> findest du oben in der Seitenleiste.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="ty-info-grid">
+        <div class="ty-info">
+          <div class="feature-icon">🧾</div>
+          <h3>Rechnung &amp; Kündigung</h3>
+          <p>Verwaltest du selbst unter <a href="https://app.link.com" target="_blank" rel="noopener">app.link.com</a> mit der E-Mail-Adresse vom Kauf. Kündigst du in den ersten 7 Tagen, zahlst du nichts. <a href="kuendigen.html">So kündigst du</a></p>
+        </div>
+        <div class="ty-info">
+          <div class="feature-icon">💬</div>
+          <h3>Fragen oder Probleme?</h3>
+          <p>Schreib einfach an <a href="mailto:smalox.der.beste@gmail.com">smalox.der.beste@gmail.com</a>, ich antworte so schnell wie möglich.</p>
+        </div>
+      </div>
+
+      <p class="ty-back"><a href="index.html">← Zurück zur Startseite</a></p>
     </div>
   </main>
 

@@ -24,6 +24,13 @@ kein Gewerbe angemeldet ist. Alle "Testen"-Buttons führen auf den Live-
 Zahlungslink `https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00` (7 Tage 0 €,
 danach 10 €/Jahr). Die `.exe` ist nur noch auf `danke.html` verlinkt.
 
+## CSS-Änderungen
+
+Alle Seiten laden `style.css?v=N`. GitHub Pages lässt Browser CSS etwa 10
+Minuten zwischenspeichern, deshalb nach jeder CSS-Änderung die Zahl `N` in
+allen HTML-Dateien hochzählen, sonst sehen Besucher neue HTML-Inhalte mit
+altem Styling.
+
 ## Lokal ansehen
 
 ```
