@@ -4,15 +4,22 @@ Marketing-/Verkaufs-Website für [Zeitblick](../zeitblick/), aufgebaut wie eine
 klassische SaaS-Landingpage (Hero, Problem/Lösung, Live-Vorschau, Preise, FAQ),
 in Design und Farben an die echte App angelehnt.
 
-Vanilla HTML/CSS/JS, keine Abhängigkeiten außer Google Fonts. Noch **keine**
-echte Zahlungsanbindung — der "Platz sichern"-Button im Preise-Bereich öffnet
-stattdessen eine vorausgefüllte E-Mail (kein Backend vorhanden).
+Vanilla HTML/CSS/JS, keine Abhängigkeiten außer Google Fonts. Live unter
+https://smaloxzs.github.io/zeitblick-landing/ (GitHub Pages, eigenes Repo).
+
+## Preismodell
+
+**10 € pro Jahr** mit 7 Tagen kostenloser Testphase. Bezahlt wird über einen
+Stripe-Zahlungslink mit **Managed Payments**: Stripe (über seinen Dienst Link)
+ist gegenüber dem Kunden der Verkäufer und übernimmt Umsatzsteuer, Rechnungen
+und die Abo-Kündigung (app.link.com). Kein eigenes Backend nötig. Nach dem
+Kauf leitet Stripe auf `danke.html` weiter, dort gibt es den Download.
 
 ## Status
 
-Vorschau/Preview-Phase: `noindex` gesetzt, Impressum/Datenschutz mit
-Platzhaltern (wie bei `smalox-webdesign`), da noch kein Gewerbe für den Verkauf
-angemeldet ist.
+Vorschau-Phase: `noindex` gesetzt, Impressum mit Platzhalter-Adresse, da noch
+kein Gewerbe angemeldet ist. Der Kaufen-Button kommt, sobald der Live-
+Zahlungslink aus Stripe vorliegt.
 
 ## Lokal ansehen
 
@@ -22,14 +29,10 @@ python -m http.server 8774 --directory web-demos/zeitblick-landing
 
 oder `index.html` direkt im Browser öffnen.
 
-## Nächste Schritte (nicht Teil dieser Seite)
+## Nächste Schritte
 
-- Echte Zahlungsanbindung (z. B. Stripe) für das 5-€/Monat-Abo — dafür wird ein
-  Backend nötig, eine reine statische Seite reicht nicht mehr aus.
-- Zeitblick als einzelne, sich selbst aktualisierende Installer-Datei bündeln
-  (z. B. PyInstaller + Auto-Update-Mechanismus), statt der aktuellen
-  `.cmd`-Skripte.
-- Fokus-Timer (Pomodoro: 25 Min. Fokus / 5 Min. Pause) mit automatischer
-  Ablenkungssperre während des Fokus-Blocks — als neues Feature der App selbst,
-  auf dieser Seite bereits im Roadmap-Abschnitt angeteasert.
-- Werbung/Marketing, sobald ein echter Verkaufsstart ansteht.
+- Live-Zahlungslink aus Stripe als Kaufen-Button einbauen und den kostenlosen
+  Download-Button entfernen (die Stripe-Testphase ersetzt ihn).
+- Lizenzprüfung in der App: Aktuell prüft Zeitblick nicht, ob ein Abo aktiv
+  ist. Dafür wäre ein kleiner Server nötig, der bei Stripe nachfragt.
+- Impressum mit echter Adresse, dann `noindex` entfernen.
