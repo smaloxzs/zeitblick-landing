@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Zeitblick Werbebild</title>
+<!--
+  Vorlage für Werbebilder. Format per ?f=og|post|carousel|story wählen und mit
+  render-ads.cmd (headless Edge) als PNG speichern. Nutzt die Farben und die
+  App-Vorschau aus ../style.css, damit alles wie die Website aussieht.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=4">
+<style>
+  html, body { margin: 0; overflow: hidden; background: var(--bg); }
+  body { color: var(--text); font-family: var(--font-body); }
+  .ad { position: relative; overflow: hidden; display: none; flex-direction: column; }
+  .ad::before {
+    content: ""; position: absolute; inset: -10%; pointer-events: none;
+    background:
+      radial-gradient(circle at 78% 12%, #7c5cff45, transparent 42%),
+      radial-gradient(circle at 10% 95%, #4d7cfe33, transparent 45%);
+  }
+  .ad > * { position: relative; }
+  body.f-og .ad.og, body.f-post .ad.post, body.f-carousel .ad.carousel, body.f-story .ad.story { display: flex; }
+
+  .brand { display: flex; align-items: center; gap: 14px; font-family: var(--font-head); font-weight: 700; }
+  .brand .logo-mark { color: #fff; }
+  .headline { font-family: var(--font-head); font-weight: 700; letter-spacing: -1.5px; line-height: 1.04; }
+  .grad { background: linear-gradient(135deg, #c3b5ff, var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { color: var(--muted); line-height: 1.45; }
+  .pill { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-weight: 700; white-space: nowrap; }
+  .pill-solid { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; box-shadow: 0 16px 44px -14px #7c5cffcc; }
+  .pill-ghost { border: 2px solid #3a3f56; color: #d7dae4; background: #14161fcc; }
+  .url { color: #aab0c4; font-weight: 600; }
+  .mock .hero-visual { padding-bottom: 0; max-width: none; }
+  .mock .browser-card { box-shadow: 0 40px 90px -30px #000, 0 0 0 1px #7c5cff22; }
+
+  /* ── Link-Vorschau 1200 x 630 ── */
+  .og { width: 1200px; height: 630px; padding: 60px 64px; box-sizing: border-box; flex-direction: row; align-items: center; gap: 46px; }
+  .og .left { flex: 0 0 560px; display: flex; flex-direction: column; gap: 22px; }
+  .og .brand { font-size: 30px; }
+  .og .brand .logo-mark { width: 44px; height: 44px; border-radius: 12px; font-size: 22px; }
+  .og .headline { font-size: 60px; }
+  .og .sub { font-size: 22px; }
+  .og .row { display: flex; gap: 14px; align-items: center; margin-top: 6px; }
+  .og .pill { font-size: 20px; padding: 14px 26px; }
+  .og .mock { flex: 1; zoom: 0.92; }
+
+  /* ── Instagram-Post 1080 x 1350 ── */
+  .post, .carousel { width: 1080px; height: 1350px; padding: 84px 80px 76px; box-sizing: border-box; gap: 34px; }
+  .post .brand, .carousel .brand, .story .brand { font-size: 40px; }
+  .post .brand .logo-mark, .carousel .brand .logo-mark, .story .brand .logo-mark { width: 58px; height: 58px; border-radius: 16px; font-size: 30px; }
+  .post .headline { font-size: 94px; margin-top: 10px; }
+  .post .sub { font-size: 32px; }
+  .post .mock { zoom: 1.32; margin-top: 6px; }
+  .bottom { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .post .pill, .carousel .pill { font-size: 34px; padding: 24px 40px; }
+  .post .tag, .carousel .tag { font-size: 28px; color: #d7dae4; font-weight: 600; text-align: right; line-height: 1.35; }
+  .post .tag span, .carousel .tag span { display: block; color: var(--muted); font-weight: 500; font-size: 24px; }
+
+  /* ── Karussell-Bild 2: Warum Zeitblick ── */
+  .carousel .headline { font-size: 84px; margin-top: 16px; }
+  .features { display: flex; flex-direction: column; gap: 22px; margin-top: 18px; }
+  .feat { display: flex; gap: 26px; align-items: flex-start; background: #14161fd9; border: 1.5px solid var(--border); border-radius: 26px; padding: 28px 30px; }
+  .feat .ico { flex: 0 0 76px; height: 76px; display: grid; place-items: center; font-size: 38px; background: var(--panel-2); border: 1.5px solid var(--border); border-radius: 20px; }
+  .feat h3 { font-family: var(--font-head); font-size: 36px; margin: 2px 0 6px; }
+  .feat p { color: var(--muted); font-size: 27px; line-height: 1.4; margin: 0; }
+
+  /* ── Story 1080 x 1920 ── */
+  .story { width: 1080px; height: 1920px; padding: 150px 80px 190px; box-sizing: border-box; gap: 40px; align-items: center; text-align: center; }
+  .story .headline { font-size: 104px; margin-top: 30px; }
+  .story .sub { font-size: 36px; max-width: 860px; }
+  .story .mock { zoom: 1.32; width: 100%; margin-top: 10px; text-align: left; }
+  .checks { display: flex; flex-direction: column; gap: 16px; font-size: 34px; color: #d7dae4; margin-top: 10px; }
+  .checks b { color: #b6a4ff; margin-right: 10px; }
+  .story .pill { font-size: 44px; padding: 32px 60px; margin-top: auto; }
+  .story .tag { font-size: 32px; color: #d7dae4; font-weight: 600; }
+  .story .url { font-size: 30px; }
+</style>
+</head>
+<body>
+
+<template id="mock">
+  <div class="hero-visual">
+    <div class="browser-card">
+      <div class="browser-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="browser-url">zeitblick.app</span>
+      </div>
+      <div class="browser-body">
+        <div class="mini-week">
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:14%;background:var(--cat-produktiv)"></span>
+            <span style="height:10%;background:var(--cat-kommunikation)"></span>
+            <span style="height:30%;background:var(--cat-gaming)"></span>
+          </div><b>Mo</b></div>
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:22%;background:var(--cat-produktiv)"></span>
+            <span style="height:8%;background:var(--cat-browsing)"></span>
+            <span style="height:12%;background:var(--cat-sozial)"></span>
+          </div><b>Di</b></div>
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:30%;background:var(--cat-produktiv)"></span>
+            <span style="height:6%;background:var(--cat-lernen)"></span>
+            <span style="height:8%;background:var(--cat-kommunikation)"></span>
+          </div><b>Mi</b></div>
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:12%;background:var(--cat-produktiv)"></span>
+            <span style="height:10%;background:var(--cat-sozial)"></span>
+            <span style="height:22%;background:var(--cat-unterhaltung)"></span>
+          </div><b>Do</b></div>
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:18%;background:var(--cat-produktiv)"></span>
+            <span style="height:36%;background:var(--cat-gaming)"></span>
+          </div><b>Fr</b></div>
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:8%;background:var(--cat-design)"></span>
+            <span style="height:40%;background:var(--cat-gaming)"></span>
+            <span style="height:10%;background:var(--cat-sozial)"></span>
+          </div><b>Sa</b></div>
+          <div class="mini-day"><div class="mini-bar">
+            <span style="height:16%;background:var(--cat-unterhaltung)"></span>
+            <span style="height:14%;background:var(--cat-sozial)"></span>
+            <span style="height:10%;background:var(--cat-kommunikation)"></span>
+          </div><b>So</b></div>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-donut" style="background: conic-gradient(var(--cat-produktiv) 0% 34%, var(--cat-gaming) 34% 58%, var(--cat-unterhaltung) 58% 76%, var(--cat-sozial) 76% 90%, var(--cat-design) 90% 100%)">
+            <div class="mini-donut-hole"><b>32 Std.</b><span>diese Woche</span></div>
+          </div>
+          <div class="mini-legend">
+            <div><span class="dot" style="background:var(--cat-produktiv)"></span>Produktivität<b>34 %</b></div>
+            <div><span class="dot" style="background:var(--cat-gaming)"></span>Gaming<b>24 %</b></div>
+            <div><span class="dot" style="background:var(--cat-unterhaltung)"></span>Unterhaltung<b>18 %</b></div>
+            <div><span class="dot" style="background:var(--cat-sozial)"></span>Soziale Medien<b>14 %</b></div>
+            <div><span class="dot" style="background:var(--cat-design)"></span>Design<b>10 %</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- Link-Vorschau (WhatsApp, Discord, X, iMessage ...) -->
+<section class="ad og">
+  <div class="left">
+    <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
+    <div class="headline">Sieh endlich, wohin deine Zeit <span class="grad">wirklich</span> geht.</div>
+    <div class="sub">Automatisches Zeittracking für Windows. Kein Timer, keine Screenshots, alles bleibt auf deinem PC.</div>
+    <div class="row">
+      <span class="pill pill-solid">7 Tage kostenlos testen</span>
+      <span class="pill pill-ghost">10 € im Jahr</span>
+    </div>
+  </div>
+  <div class="mock"></div>
+</section>
+
+<!-- Instagram-Post / Karussell-Bild 1 -->
+<section class="ad post">
+  <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
+  <div class="headline">Sieh endlich, wohin deine Zeit <span class="grad">wirklich</span> geht.</div>
+  <div class="sub">Zeitblick zeichnet automatisch auf, welche Apps, Spiele und Websites du am PC nutzt. Ohne Timer, ohne Screenshots.</div>
+  <div class="mock"></div>
+  <div class="bottom">
+    <span class="pill pill-solid">7 Tage kostenlos testen</span>
+    <div class="tag">10 € im Jahr<span>für Windows</span></div>
+  </div>
+</section>
+
+<!-- Karussell-Bild 2 -->
+<section class="ad carousel">
+  <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
+  <div class="headline">Wofür geht deine Zeit <span class="grad">eigentlich</span> drauf?</div>
+  <div class="features">
+    <div class="feat"><div class="ico">⏱️</div><div><h3>Trackt von selbst</h3><p>Jede App, jedes Spiel, jede Website. Du musst nie einen Timer starten.</p></div></div>
+    <div class="feat"><div class="ico">🎯</div><div><h3>Fokus-Modus</h3><p>Hält dir TikTok, YouTube und Co. vom Leib, solange du lernst oder arbeitest.</p></div></div>
+    <div class="feat"><div class="ico">🔒</div><div><h3>100 % privat</h3><p>Keine Cloud, keine Screenshots. Deine Daten bleiben auf deinem PC.</p></div></div>
+    <div class="feat"><div class="ico">💶</div><div><h3>10 € im Jahr</h3><p>Zum Vergleich: Rize kostet ab 9,99 $ im Monat.</p></div></div>
+  </div>
+  <div class="bottom">
+    <span class="pill pill-solid">7 Tage kostenlos testen</span>
+    <div class="tag">Link in Bio<span>für Windows</span></div>
+  </div>
+</section>
+
+<!-- Story (Instagram, TikTok, WhatsApp-Status) -->
+<section class="ad story">
+  <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
+  <div class="headline">Wo ist dein Tag <span class="grad">eigentlich</span> hin?</div>
+  <div class="sub">Zeitblick zeigt dir automatisch, wie viel Zeit du am PC in welche Apps und Websites steckst.</div>
+  <div class="mock"></div>
+  <div class="checks">
+    <div><b>✓</b>Trackt von selbst, ohne Timer</div>
+    <div><b>✓</b>Fokus-Modus gegen Ablenkung</div>
+    <div><b>✓</b>100 % lokal auf deinem PC</div>
+  </div>
+  <span class="pill pill-solid">7 Tage kostenlos testen</span>
+  <div class="tag">danach 10 € im Jahr · für Windows</div>
+  <div class="url">smaloxzs.github.io/zeitblick-landing</div>
+</section>
+
+<script>
+  const f = new URLSearchParams(location.search).get("f") || "og";
+  document.body.classList.add("f-" + f);
+  const tpl = document.getElementById("mock");
+  document.querySelectorAll(".mock").forEach(m => m.appendChild(tpl.content.cloneNode(true)));
+</script>
+</body>
+</html>
