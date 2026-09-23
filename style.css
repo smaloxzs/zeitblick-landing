@@ -634,11 +634,34 @@ a { color: inherit; text-decoration: none; }
 .ty-info a, .ty-back a { color: var(--accent2); }
 .ty-back { text-align: center; font-size: 14px; }
 
+/* Varianten für die Kündigen-Seite */
+.ty-check.soft {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 8px #ffffff08;
+  font-size: 32px;
+}
+.ty-info-grid.three { grid-template-columns: repeat(3, 1fr); }
+.ty-help {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin-bottom: 36px;
+}
+.ty-help .feature-icon { flex: 0 0 46px; margin-bottom: 0; }
+.ty-help h3 { font-size: 16px; margin: 4px 0 6px; }
+.ty-help p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.ty-help a { color: var(--accent2); }
+
 @media (max-width: 640px) {
   .ty-main { padding: 48px 0 80px; }
   .ty-hero h1 { font-size: 28px; }
   .ty-download { padding: 28px 18px; }
-  .ty-info-grid { grid-template-columns: 1fr; }
+  .ty-info-grid, .ty-info-grid.three { grid-template-columns: 1fr; }
 }
 
 /* ── Responsive ── */

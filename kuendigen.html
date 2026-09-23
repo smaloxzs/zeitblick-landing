@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -21,34 +21,74 @@
     </div>
   </header>
 
-  <main class="subpage-main">
-    <div class="container narrow">
-      <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-      <h1>Abo kündigen</h1>
+  <main class="ty-main">
+    <div class="container ty-wrap">
 
-      <p>Du kannst dein Zeitblick-Abo jederzeit selbst kündigen, ohne Angabe von Gründen. Das dauert etwa eine Minute.</p>
+      <div class="ty-hero">
+        <div class="ty-check soft" aria-hidden="true">👋</div>
+        <h1>Abo kündigen</h1>
+        <p class="ty-sub">Du kannst dein Zeitblick-Abo jederzeit selbst kündigen, ohne Angabe von Gründen. Das dauert etwa eine Minute.</p>
+      </div>
 
-      <h2>So kündigst du</h2>
-      <ol>
-        <li>Öffne <strong>app.link.com</strong>. Link ist der Bezahldienst von Stripe, über den du Zeitblick abgeschlossen hast.</li>
-        <li>Melde dich mit der <strong>E-Mail-Adresse an, die du beim Kauf angegeben hast</strong>. Link schickt dir dafür einen Bestätigungscode, ein Passwort brauchst du nicht.</li>
-        <li>Unter deinen Käufen findest du <strong>Zeitblick</strong>. Öffne es und wähle <strong>„Abo kündigen“</strong>.</li>
-        <li>Fertig. Du bekommst eine Bestätigung per E-Mail.</li>
+      <div class="ty-download">
+        <h2>Kündigung bei Link</h2>
+        <p class="ty-meta">Link ist der Bezahldienst von Stripe, über den du Zeitblick abgeschlossen hast · kein Passwort nötig</p>
+        <a href="https://app.link.com" target="_blank" rel="noopener" class="btn btn-pill-solid btn-large">Zu app.link.com</a>
+      </div>
+
+      <h2 class="ty-section-title">So kündigst du</h2>
+      <ol class="ty-steps">
+        <li>
+          <span class="ty-num">1</span>
+          <div>
+            <h3>app.link.com öffnen</h3>
+            <p>Über den Button oben oder über den Link in der Bestätigungs-E-Mail, die du beim Abschluss bekommen hast.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ty-num">2</span>
+          <div>
+            <h3>Mit deiner E-Mail anmelden</h3>
+            <p>Nimm die <strong>E-Mail-Adresse, die du beim Kauf angegeben hast</strong>. Link schickt dir einen Bestätigungscode, ein Passwort brauchst du nicht.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ty-num">3</span>
+          <div>
+            <h3>Abo kündigen</h3>
+            <p>Unter deinen Käufen findest du <strong>Zeitblick</strong>. Öffne es und wähle <strong>„Abo kündigen“</strong>. Danach bekommst du eine Bestätigung per E-Mail.</p>
+          </div>
+        </li>
       </ol>
-      <p>
-        <a href="https://app.link.com" target="_blank" rel="noopener" class="btn btn-pill-solid">Zu app.link.com</a>
-      </p>
-      <p>Den Weg dorthin findest du auch in der Bestätigungs-E-Mail von Link, die du beim Abschluss bekommen hast.</p>
 
-      <h2>Was nach der Kündigung passiert</h2>
-      <ul>
-        <li>Kündigst du <strong>innerhalb der ersten 7 Tage</strong>, zahlst du gar nichts.</li>
-        <li>Danach verlängert sich dein Abo nicht mehr und es wird nichts weiter abgebucht.</li>
-        <li>Deine erfassten Daten liegen nur lokal auf deinem PC. Willst du Zeitblick auch vom PC entfernen: <strong>Windows-Einstellungen → Apps → Zeitblick → Deinstallieren</strong>. Dabei werden auch deine Tracking-Daten gelöscht.</li>
-      </ul>
+      <h2 class="ty-section-title">Was danach passiert</h2>
+      <div class="ty-info-grid three">
+        <div class="ty-info">
+          <div class="feature-icon">🎁</div>
+          <h3>In den ersten 7 Tagen</h3>
+          <p>Kündigst du in der Testphase, zahlst du gar nichts.</p>
+        </div>
+        <div class="ty-info">
+          <div class="feature-icon">📅</div>
+          <h3>Danach</h3>
+          <p>Dein Abo verlängert sich nicht mehr, es wird nichts weiter abgebucht.</p>
+        </div>
+        <div class="ty-info">
+          <div class="feature-icon">💾</div>
+          <h3>Deine Daten</h3>
+          <p>Liegen nur lokal auf deinem PC. Beim Deinstallieren (<strong>Einstellungen → Apps → Zeitblick</strong>) werden sie mit gelöscht.</p>
+        </div>
+      </div>
 
-      <h2>Probleme beim Kündigen?</h2>
-      <p>Schreib mir an <a href="mailto:smalox.der.beste@gmail.com?subject=Zeitblick%20Abo%20k%C3%BCndigen">smalox.der.beste@gmail.com</a> und nenn die E-Mail-Adresse, mit der du Zeitblick abgeschlossen hast. Dann kündige ich dein Abo für dich.</p>
+      <div class="ty-help">
+        <div class="feature-icon">💬</div>
+        <div>
+          <h3>Probleme beim Kündigen?</h3>
+          <p>Schreib mir an <a href="mailto:smalox.der.beste@gmail.com?subject=Zeitblick%20Abo%20k%C3%BCndigen">smalox.der.beste@gmail.com</a> und nenn die E-Mail-Adresse, mit der du Zeitblick abgeschlossen hast. Dann kündige ich dein Abo für dich.</p>
+        </div>
+      </div>
+
+      <p class="ty-back"><a href="index.html">← Zurück zur Startseite</a></p>
     </div>
   </main>
 
