@@ -14,6 +14,8 @@ Stripe-Zahlungslink mit **Managed Payments**: Stripe (über seinen Dienst Link)
 ist gegenüber dem Kunden der Verkäufer und übernimmt Umsatzsteuer, Rechnungen
 und die Abo-Kündigung (app.link.com). Kein eigenes Backend nötig. Nach dem
 Kauf leitet Stripe auf `danke.html` weiter, dort gibt es den Download.
+`kuendigen.html` erklärt Schritt für Schritt das Kündigen über app.link.com und
+ist im Footer jeder Seite sowie in der FAQ verlinkt.
 
 ## Status
 
