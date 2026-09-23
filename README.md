@@ -18,8 +18,9 @@ Kauf leitet Stripe auf `danke.html` weiter, dort gibt es den Download.
 ## Status
 
 Vorschau-Phase: `noindex` gesetzt, Impressum mit Platzhalter-Adresse, da noch
-kein Gewerbe angemeldet ist. Der Kaufen-Button kommt, sobald der Live-
-Zahlungslink aus Stripe vorliegt.
+kein Gewerbe angemeldet ist. Alle "Testen"-Buttons führen auf den Live-
+Zahlungslink `https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00` (7 Tage 0 €,
+danach 10 €/Jahr). Die `.exe` ist nur noch auf `danke.html` verlinkt.
 
 ## Lokal ansehen
 
@@ -31,8 +32,6 @@ oder `index.html` direkt im Browser öffnen.
 
 ## Nächste Schritte
 
-- Live-Zahlungslink aus Stripe als Kaufen-Button einbauen und den kostenlosen
-  Download-Button entfernen (die Stripe-Testphase ersetzt ihn).
 - Lizenzprüfung in der App: Aktuell prüft Zeitblick nicht, ob ein Abo aktiv
   ist. Dafür wäre ein kleiner Server nötig, der bei Stripe nachfragt.
 - Impressum mit echter Adresse, dann `noindex` entfernen.
