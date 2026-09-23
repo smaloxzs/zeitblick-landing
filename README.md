@@ -4,7 +4,8 @@ Marketing-/Verkaufs-Website für [Zeitblick](../zeitblick/), aufgebaut wie eine
 klassische SaaS-Landingpage (Hero, Problem/Lösung, Live-Vorschau, Preise, FAQ),
 in Design und Farben an die echte App angelehnt.
 
-Vanilla HTML/CSS/JS, keine Abhängigkeiten außer Google Fonts. Live unter
+Vanilla HTML/CSS/JS, keine Abhängigkeiten. Schriften (Inter, Space Grotesk)
+liegen selbst gehostet in `fonts/`, es geht kein Aufruf an Google. Live unter
 https://smaloxzs.github.io/zeitblick-landing/ (GitHub Pages, eigenes Repo).
 
 ## Preismodell

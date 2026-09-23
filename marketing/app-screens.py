@@ -145,6 +145,7 @@ def main():
     try:
         for name in ("app.js", "style.css"):
             shutil.copy2(os.path.join(APP, name), work)
+        shutil.copytree(os.path.join(APP, "fonts"), os.path.join(work, "fonts"))
         with open(os.path.join(APP, "index.html"), encoding="utf-8") as f:
             html = f.read()
         html = html.replace('<script src="app.js"></script>', SHIM % iso(NOW) + '<script src="app.js"></script>')
