@@ -43,6 +43,13 @@ Edge: die Link-Vorschauen `og-image.png`/`og-image-en.png`, deutsche
 Instagram-Bilder in `marketing/` und englische Bilder plus Product-Hunt-Galerie
 und -Vorschaubild in `marketing/en/`.
 
+Echte App-Screenshots für Reddit und X erzeugt `marketing/app-screens.py`: Es
+nimmt die App aus `../zeitblick`, füttert sie mit einer erfundenen Beispielwoche
+und speichert `marketing/screens/app-{week,stats}-{de,en}.png`. **Nie echte
+Tracking-Daten verwenden**, die enthalten private Fenstertitel. Danach baut
+`render-ads.cmd` daraus die 16:9-Bilder `x-woche.png`, `x-statistik.png`,
+`en/x-week.png` und `en/x-stats.png`.
+
 ## CSS-Änderungen
 
 Alle Seiten laden `style.css?v=N`. GitHub Pages lässt Browser CSS etwa 10

@@ -21,4 +21,11 @@ rem Englisch
 "%EDGE%" %OPTS% --window-size=1080,1920 --screenshot="%CD%\en\story.png"            "%SRC%?f=story&lang=en"
 "%EDGE%" %OPTS% --window-size=1270,760  --screenshot="%CD%\en\producthunt-gallery.png" "%SRC%?f=ph&lang=en"
 "%EDGE%" %OPTS% --window-size=480,480   --screenshot="%CD%\en\producthunt-thumbnail.png" "%SRC%?f=thumb"
+
+rem X/Reddit 1600x900 mit echten App-Screenshots (vorher: python app-screens.py)
+set "XOPTS=%OPTS% --allow-file-access-from-files --window-size=1600,900"
+"%EDGE%" %XOPTS% --screenshot="%CD%\x-woche.png"         "%SRC%?f=x&shot=week"
+"%EDGE%" %XOPTS% --screenshot="%CD%\x-statistik.png"     "%SRC%?f=x&shot=stats"
+"%EDGE%" %XOPTS% --screenshot="%CD%\en\x-week.png"       "%SRC%?f=x&shot=week&lang=en"
+"%EDGE%" %XOPTS% --screenshot="%CD%\en\x-stats.png"      "%SRC%?f=x&shot=stats&lang=en"
 echo Fertig.

@@ -91,6 +91,21 @@
   .thumb::before { display: none; }
   .thumb .glyph { color: #fff; font-size: 400px; line-height: 1; font-family: var(--font-head); }
   body.f-thumb .ad.thumb { display: flex; }
+
+  /* ── X/Reddit-Bild 1600 x 900 mit echtem App-Screenshot (screens/, erzeugt von app-screens.py) ── */
+  .x { width: 1600px; height: 900px; padding: 70px 0 0 72px; box-sizing: border-box; flex-direction: row; gap: 56px; }
+  body.f-x .ad.x { display: flex; }
+  .x .left { flex: 0 0 470px; display: flex; flex-direction: column; gap: 26px; padding-bottom: 64px; }
+  .x .brand { font-size: 34px; }
+  .x .brand .logo-mark { width: 50px; height: 50px; border-radius: 14px; font-size: 26px; }
+  .x .headline { font-size: 70px; margin-top: 12px; }
+  .x .sub { font-size: 26px; }
+  .x .row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
+  .x .pill { font-size: 22px; padding: 16px 28px; }
+  .x .url { margin-top: auto; font-size: 21px; }
+  .x .url span { display: block; color: #6f7690; font-weight: 500; font-size: 17px; margin-top: 6px; }
+  .x .shot { flex: 0 0 auto; align-self: flex-end; margin-bottom: -44px; }
+  .x .shot img { display: block; width: 1150px; border-radius: 18px; border: 1.5px solid #2c3044; box-shadow: 0 40px 100px -30px #000, 0 0 0 1px #7c5cff26; }
 </style>
 </head>
 <body>
@@ -214,6 +229,23 @@
   <div class="url" data-en="smaloxzs.github.io/zeitblick-landing/en">smaloxzs.github.io/zeitblick-landing</div>
 </section>
 
+<!-- X/Reddit-Bild mit echtem Screenshot: ?f=x&shot=week oder ?f=x&shot=stats -->
+<section class="ad x">
+  <div class="left">
+    <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
+    <div class="headline shot-week" data-en="Your week. <span class='grad'>Tracked</span> by itself.">Deine Woche. <span class="grad">Von selbst</span> getrackt.</div>
+    <div class="sub shot-week" data-en="Every app, game and website you use on your PC, as a calendar. No timers, nothing leaves your machine.">Jede App, jedes Spiel und jede Website am PC als Kalender. Ohne Timer, alles bleibt auf deinem Rechner.</div>
+    <div class="headline shot-stats" data-en="Where did your week <span class='grad'>actually</span> go?">Wo ist deine Woche <span class="grad">eigentlich</span> hin?</div>
+    <div class="sub shot-stats" data-en="Categories, top apps, daily totals. €10 a year instead of $9.99 a month.">Kategorien, Top-Apps, Tagesverlauf. 10 € im Jahr statt 9,99 $ im Monat.</div>
+    <div class="row">
+      <span class="pill pill-solid" data-en="Try it free for 7 days">7 Tage kostenlos testen</span>
+      <span class="pill pill-ghost" data-en="€10 a year">10 € im Jahr</span>
+    </div>
+    <div class="url" data-en="smaloxzs.github.io/zeitblick-landing/en<span>Windows 10/11 · screenshot with sample data</span>">smaloxzs.github.io/zeitblick-landing<span>Windows 10/11 · Screenshot mit Beispieldaten</span></div>
+  </div>
+  <div class="shot"><img alt=""></div>
+</section>
+
 <!-- Product-Hunt-Vorschaubild (quadratisches Icon) -->
 <section class="ad thumb"><span class="glyph">◔</span></section>
 
@@ -227,6 +259,9 @@
     document.documentElement.lang = "en";
     document.querySelectorAll("[data-en]").forEach(el => { el.innerHTML = el.dataset.en; });
   }
+  const shot = params.get("shot") || "week";
+  document.querySelectorAll(".shot-week, .shot-stats").forEach(el => { el.hidden = !el.classList.contains("shot-" + shot); });
+  document.querySelector(".x .shot img").src = `screens/app-${shot}-${params.get("lang") === "en" ? "en" : "de"}.png`;
 </script>
 </body>
 </html>
