@@ -24,6 +24,25 @@ kein Gewerbe angemeldet ist. Alle "Testen"-Buttons führen auf den Live-
 Zahlungslink `https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00` (7 Tage 0 €,
 danach 10 €/Jahr). Die `.exe` ist nur noch auf `danke.html` verlinkt.
 
+## Englische Version
+
+Unter `en/` (`index.html`, `thanks.html`, `cancel.html`), gleiches Design über
+`../style.css`. Beide Sprachen verlinken sich gegenseitig (Umschalter oben,
+`hreflang`). Rechtliche Seiten gibt es nur auf Deutsch. Stripe leitet nach dem
+Kauf immer auf `danke.html`; Browser mit nicht-deutscher Sprache werden dort
+automatisch auf `en/thanks.html` weitergeleitet (`?lang=de` verhindert das).
+
+Bei einer neuen App-Version den Download-Link in **`danke.html` und
+`en/thanks.html`** anpassen.
+
+## Werbebilder
+
+`marketing/ad.html` ist eine Vorlage für alle Werbebilder (DE und EN, per
+`?f=` und `?lang=en`). `marketing/render-ads.cmd` erzeugt daraus per headless
+Edge: die Link-Vorschauen `og-image.png`/`og-image-en.png`, deutsche
+Instagram-Bilder in `marketing/` und englische Bilder plus Product-Hunt-Galerie
+und -Vorschaubild in `marketing/en/`.
+
 ## CSS-Änderungen
 
 Alle Seiten laden `style.css?v=N`. GitHub Pages lässt Browser CSS etwa 10

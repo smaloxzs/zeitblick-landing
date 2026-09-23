@@ -78,6 +78,19 @@
   .story .pill { font-size: 44px; padding: 32px 60px; margin-top: auto; }
   .story .tag { font-size: 32px; color: #d7dae4; font-weight: 600; }
   .story .url { font-size: 30px; }
+
+  /* ── Product-Hunt-Galeriebild 1270 x 760: gleiches Layout wie die Link-Vorschau ── */
+  body.f-ph .ad.og { display: flex; width: 1270px; height: 760px; padding: 80px 76px; }
+  body.f-ph .og .left { flex-basis: 590px; gap: 26px; }
+  body.f-ph .og .headline { font-size: 66px; }
+  body.f-ph .og .sub { font-size: 24px; }
+  body.f-ph .og .mock { zoom: 1; }
+
+  /* ── Product-Hunt-Vorschaubild 480 x 480 ── */
+  .thumb { width: 480px; height: 480px; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--accent), var(--accent2)); }
+  .thumb::before { display: none; }
+  .thumb .glyph { color: #fff; font-size: 400px; line-height: 1; font-family: var(--font-head); }
+  body.f-thumb .ad.thumb { display: flex; }
 </style>
 </head>
 <body>
@@ -95,47 +108,47 @@
             <span style="height:14%;background:var(--cat-produktiv)"></span>
             <span style="height:10%;background:var(--cat-kommunikation)"></span>
             <span style="height:30%;background:var(--cat-gaming)"></span>
-          </div><b>Mo</b></div>
+          </div><b data-en="Mon">Mo</b></div>
           <div class="mini-day"><div class="mini-bar">
             <span style="height:22%;background:var(--cat-produktiv)"></span>
             <span style="height:8%;background:var(--cat-browsing)"></span>
             <span style="height:12%;background:var(--cat-sozial)"></span>
-          </div><b>Di</b></div>
+          </div><b data-en="Tue">Di</b></div>
           <div class="mini-day"><div class="mini-bar">
             <span style="height:30%;background:var(--cat-produktiv)"></span>
             <span style="height:6%;background:var(--cat-lernen)"></span>
             <span style="height:8%;background:var(--cat-kommunikation)"></span>
-          </div><b>Mi</b></div>
+          </div><b data-en="Wed">Mi</b></div>
           <div class="mini-day"><div class="mini-bar">
             <span style="height:12%;background:var(--cat-produktiv)"></span>
             <span style="height:10%;background:var(--cat-sozial)"></span>
             <span style="height:22%;background:var(--cat-unterhaltung)"></span>
-          </div><b>Do</b></div>
+          </div><b data-en="Thu">Do</b></div>
           <div class="mini-day"><div class="mini-bar">
             <span style="height:18%;background:var(--cat-produktiv)"></span>
             <span style="height:36%;background:var(--cat-gaming)"></span>
-          </div><b>Fr</b></div>
+          </div><b data-en="Fri">Fr</b></div>
           <div class="mini-day"><div class="mini-bar">
             <span style="height:8%;background:var(--cat-design)"></span>
             <span style="height:40%;background:var(--cat-gaming)"></span>
             <span style="height:10%;background:var(--cat-sozial)"></span>
-          </div><b>Sa</b></div>
+          </div><b data-en="Sat">Sa</b></div>
           <div class="mini-day"><div class="mini-bar">
             <span style="height:16%;background:var(--cat-unterhaltung)"></span>
             <span style="height:14%;background:var(--cat-sozial)"></span>
             <span style="height:10%;background:var(--cat-kommunikation)"></span>
-          </div><b>So</b></div>
+          </div><b data-en="Sun">So</b></div>
         </div>
         <div class="mini-stats">
           <div class="mini-donut" style="background: conic-gradient(var(--cat-produktiv) 0% 34%, var(--cat-gaming) 34% 58%, var(--cat-unterhaltung) 58% 76%, var(--cat-sozial) 76% 90%, var(--cat-design) 90% 100%)">
-            <div class="mini-donut-hole"><b>32 Std.</b><span>diese Woche</span></div>
+            <div class="mini-donut-hole"><b data-en="32 h">32 Std.</b><span data-en="this week">diese Woche</span></div>
           </div>
           <div class="mini-legend">
-            <div><span class="dot" style="background:var(--cat-produktiv)"></span>Produktivität<b>34 %</b></div>
-            <div><span class="dot" style="background:var(--cat-gaming)"></span>Gaming<b>24 %</b></div>
-            <div><span class="dot" style="background:var(--cat-unterhaltung)"></span>Unterhaltung<b>18 %</b></div>
-            <div><span class="dot" style="background:var(--cat-sozial)"></span>Soziale Medien<b>14 %</b></div>
-            <div><span class="dot" style="background:var(--cat-design)"></span>Design<b>10 %</b></div>
+            <div><span class="dot" style="background:var(--cat-produktiv)"></span><span data-en="Productivity">Produktivität</span><b data-en="34%">34 %</b></div>
+            <div><span class="dot" style="background:var(--cat-gaming)"></span><span>Gaming</span><b data-en="24%">24 %</b></div>
+            <div><span class="dot" style="background:var(--cat-unterhaltung)"></span><span data-en="Entertainment">Unterhaltung</span><b data-en="18%">18 %</b></div>
+            <div><span class="dot" style="background:var(--cat-sozial)"></span><span data-en="Social media">Soziale Medien</span><b data-en="14%">14 %</b></div>
+            <div><span class="dot" style="background:var(--cat-design)"></span><span>Design</span><b data-en="10%">10 %</b></div>
           </div>
         </div>
       </div>
@@ -143,15 +156,15 @@
   </div>
 </template>
 
-<!-- Link-Vorschau (WhatsApp, Discord, X, iMessage ...) -->
+<!-- Link-Vorschau (WhatsApp, Discord, X, iMessage ...), mit ?f=ph auch das Product-Hunt-Galeriebild -->
 <section class="ad og">
   <div class="left">
     <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
-    <div class="headline">Sieh endlich, wohin deine Zeit <span class="grad">wirklich</span> geht.</div>
-    <div class="sub">Automatisches Zeittracking für Windows. Kein Timer, keine Screenshots, alles bleibt auf deinem PC.</div>
+    <div class="headline" data-en="See where your time <span class='grad'>really</span> goes.">Sieh endlich, wohin deine Zeit <span class="grad">wirklich</span> geht.</div>
+    <div class="sub" data-en="Automatic time tracking for Windows. No timers, no screenshots, everything stays on your PC.">Automatisches Zeittracking für Windows. Kein Timer, keine Screenshots, alles bleibt auf deinem PC.</div>
     <div class="row">
-      <span class="pill pill-solid">7 Tage kostenlos testen</span>
-      <span class="pill pill-ghost">10 € im Jahr</span>
+      <span class="pill pill-solid" data-en="Try it free for 7 days">7 Tage kostenlos testen</span>
+      <span class="pill pill-ghost" data-en="€10 a year">10 € im Jahr</span>
     </div>
   </div>
   <div class="mock"></div>
@@ -160,52 +173,60 @@
 <!-- Instagram-Post / Karussell-Bild 1 -->
 <section class="ad post">
   <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
-  <div class="headline">Sieh endlich, wohin deine Zeit <span class="grad">wirklich</span> geht.</div>
-  <div class="sub">Zeitblick zeichnet automatisch auf, welche Apps, Spiele und Websites du am PC nutzt. Ohne Timer, ohne Screenshots.</div>
+  <div class="headline" data-en="See where your time <span class='grad'>really</span> goes.">Sieh endlich, wohin deine Zeit <span class="grad">wirklich</span> geht.</div>
+  <div class="sub" data-en="Zeitblick automatically records which apps, games and websites you use on your PC. No timers, no screenshots.">Zeitblick zeichnet automatisch auf, welche Apps, Spiele und Websites du am PC nutzt. Ohne Timer, ohne Screenshots.</div>
   <div class="mock"></div>
   <div class="bottom">
-    <span class="pill pill-solid">7 Tage kostenlos testen</span>
-    <div class="tag">10 € im Jahr<span>für Windows</span></div>
+    <span class="pill pill-solid" data-en="Try it free for 7 days">7 Tage kostenlos testen</span>
+    <div class="tag" data-en="€10 a year<span>for Windows</span>">10 € im Jahr<span>für Windows</span></div>
   </div>
 </section>
 
 <!-- Karussell-Bild 2 -->
 <section class="ad carousel">
   <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
-  <div class="headline">Wofür geht deine Zeit <span class="grad">eigentlich</span> drauf?</div>
+  <div class="headline" data-en="Where does your time <span class='grad'>actually</span> go?">Wofür geht deine Zeit <span class="grad">eigentlich</span> drauf?</div>
   <div class="features">
-    <div class="feat"><div class="ico">⏱️</div><div><h3>Trackt von selbst</h3><p>Jede App, jedes Spiel, jede Website. Du musst nie einen Timer starten.</p></div></div>
-    <div class="feat"><div class="ico">🎯</div><div><h3>Fokus-Modus</h3><p>Hält dir TikTok, YouTube und Co. vom Leib, solange du lernst oder arbeitest.</p></div></div>
-    <div class="feat"><div class="ico">🔒</div><div><h3>100 % privat</h3><p>Keine Cloud, keine Screenshots. Deine Daten bleiben auf deinem PC.</p></div></div>
-    <div class="feat"><div class="ico">💶</div><div><h3>10 € im Jahr</h3><p>Zum Vergleich: Rize kostet ab 9,99 $ im Monat.</p></div></div>
+    <div class="feat"><div class="ico">⏱️</div><div><h3 data-en="Tracks on its own">Trackt von selbst</h3><p data-en="Every app, every game, every website. You never have to start a timer.">Jede App, jedes Spiel, jede Website. Du musst nie einen Timer starten.</p></div></div>
+    <div class="feat"><div class="ico">🎯</div><div><h3 data-en="Focus mode">Fokus-Modus</h3><p data-en="Keeps TikTok, YouTube and co. away while you study or work.">Hält dir TikTok, YouTube und Co. vom Leib, solange du lernst oder arbeitest.</p></div></div>
+    <div class="feat"><div class="ico">🔒</div><div><h3 data-en="100% private">100 % privat</h3><p data-en="No cloud, no screenshots. Your data stays on your PC.">Keine Cloud, keine Screenshots. Deine Daten bleiben auf deinem PC.</p></div></div>
+    <div class="feat"><div class="ico">💶</div><div><h3 data-en="€10 a year">10 € im Jahr</h3><p data-en="For comparison: Rize starts at $9.99 a month.">Zum Vergleich: Rize kostet ab 9,99 $ im Monat.</p></div></div>
   </div>
   <div class="bottom">
-    <span class="pill pill-solid">7 Tage kostenlos testen</span>
-    <div class="tag">Link in Bio<span>für Windows</span></div>
+    <span class="pill pill-solid" data-en="Try it free for 7 days">7 Tage kostenlos testen</span>
+    <div class="tag" data-en="Link in bio<span>for Windows</span>">Link in Bio<span>für Windows</span></div>
   </div>
 </section>
 
 <!-- Story (Instagram, TikTok, WhatsApp-Status) -->
 <section class="ad story">
   <div class="brand"><span class="logo-mark">◔</span>Zeitblick</div>
-  <div class="headline">Wo ist dein Tag <span class="grad">eigentlich</span> hin?</div>
-  <div class="sub">Zeitblick zeigt dir automatisch, wie viel Zeit du am PC in welche Apps und Websites steckst.</div>
+  <div class="headline" data-en="Where did your day <span class='grad'>actually</span> go?">Wo ist dein Tag <span class="grad">eigentlich</span> hin?</div>
+  <div class="sub" data-en="Zeitblick automatically shows you how much time you spend on which apps and websites.">Zeitblick zeigt dir automatisch, wie viel Zeit du am PC in welche Apps und Websites steckst.</div>
   <div class="mock"></div>
   <div class="checks">
-    <div><b>✓</b>Trackt von selbst, ohne Timer</div>
-    <div><b>✓</b>Fokus-Modus gegen Ablenkung</div>
-    <div><b>✓</b>100 % lokal auf deinem PC</div>
+    <div data-en="<b>✓</b>Tracks on its own, no timer"><b>✓</b>Trackt von selbst, ohne Timer</div>
+    <div data-en="<b>✓</b>Focus mode against distractions"><b>✓</b>Fokus-Modus gegen Ablenkung</div>
+    <div data-en="<b>✓</b>100% local on your PC"><b>✓</b>100 % lokal auf deinem PC</div>
   </div>
-  <span class="pill pill-solid">7 Tage kostenlos testen</span>
-  <div class="tag">danach 10 € im Jahr · für Windows</div>
-  <div class="url">smaloxzs.github.io/zeitblick-landing</div>
+  <span class="pill pill-solid" data-en="Try it free for 7 days">7 Tage kostenlos testen</span>
+  <div class="tag" data-en="then €10 a year · for Windows">danach 10 € im Jahr · für Windows</div>
+  <div class="url" data-en="smaloxzs.github.io/zeitblick-landing/en">smaloxzs.github.io/zeitblick-landing</div>
 </section>
 
+<!-- Product-Hunt-Vorschaubild (quadratisches Icon) -->
+<section class="ad thumb"><span class="glyph">◔</span></section>
+
 <script>
-  const f = new URLSearchParams(location.search).get("f") || "og";
+  const params = new URLSearchParams(location.search);
+  const f = params.get("f") || "og";
   document.body.classList.add("f-" + f);
   const tpl = document.getElementById("mock");
   document.querySelectorAll(".mock").forEach(m => m.appendChild(tpl.content.cloneNode(true)));
+  if (params.get("lang") === "en") {
+    document.documentElement.lang = "en";
+    document.querySelectorAll("[data-en]").forEach(el => { el.innerHTML = el.dataset.en; });
+  }
 </script>
 </body>
 </html>

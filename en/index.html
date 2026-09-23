@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeitblick – Automatic, private time tracking for Windows</title>
+  <meta name="description" content="Zeitblick automatically tracks every app, game and website you use and shows you where your time really goes. No timers, no screenshots, 100% private.">
+  <meta name="robots" content="noindex">
+  <link rel="alternate" hreflang="de" href="https://smaloxzs.github.io/zeitblick-landing/">
+  <link rel="alternate" hreflang="en" href="https://smaloxzs.github.io/zeitblick-landing/en/">
+  <link rel="alternate" hreflang="x-default" href="https://smaloxzs.github.io/zeitblick-landing/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zeitblick">
+  <meta property="og:title" content="Zeitblick: See where your time really goes">
+  <meta property="og:description" content="Automatic time tracking for Windows. No timers, no screenshots, everything stays on your PC. Try it free for 7 days, then €10 a year.">
+  <meta property="og:url" content="https://smaloxzs.github.io/zeitblick-landing/en/">
+  <meta property="og:image" content="https://smaloxzs.github.io/zeitblick-landing/og-image-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=6">
+</head>
+<body>
+
+  <div class="top-banner" id="topBanner">
+    <div class="top-banner-inner">
+      <span class="top-banner-badge">Beta</span>
+      <span>Zeitblick is in active development. <a href="#pricing">Try it free for 7 days</a></span>
+    </div>
+    <button class="top-banner-close" id="topBannerClose" aria-label="Close notice">✕</button>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">◔</span>
+        <span class="logo-text">Zeitblick</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
+        <a href="#for-you">For you</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../" class="lang-switch" hreflang="de" lang="de" title="Deutsche Version">DE</a>
+        <a href="https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00" class="btn btn-pill-light btn-small">Try it free</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ Hero ══════════ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner-stack">
+        <span class="eyebrow center">Automatic time tracking</span>
+        <h1 class="center">Finally see where<br>your time really goes.</h1>
+        <p class="hero-sub center">
+          Zeitblick runs quietly in the background and automatically records which
+          programs, games and websites you use. No timer to start, no screenshots,
+          no surveillance. Just an honest picture of your day.
+        </p>
+        <div class="hero-actions center">
+          <a href="https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00" class="btn btn-pill-light btn-large">Try it free for 7 days</a>
+          <a href="#preview" class="btn btn-pill-ghost btn-large">See automatic tracking</a>
+        </div>
+        <p class="hero-note center">€10 per year · 7-day free trial · for Windows · English &amp; German</p>
+        <p class="hero-note center">Some browsers warn during the download ("isn't commonly downloaded") and Windows may show "Windows protected your PC" on first launch. Both happen only because the file is new and not yet code-signed, not because anything is wrong. Click <strong>"Keep"</strong> when downloading and <strong>"More info" → "Run anyway"</strong> when starting it.</p>
+
+        <div class="chip-row" id="for-you-chips">
+          <a href="#for-you" class="chip">For students</a>
+          <a href="#for-you" class="chip">For freelancers</a>
+          <a href="#for-you" class="chip">For gamers</a>
+          <a href="#for-you" class="chip">For remote work</a>
+          <a href="#for-you" class="chip">For more focus</a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="browser-card">
+            <div class="browser-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="browser-url">zeitblick.app</span>
+            </div>
+            <div class="browser-body">
+              <div class="mini-week" role="img" aria-label="Example week overview by category">
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:14%;background:var(--cat-produktiv)"></span>
+                  <span style="height:10%;background:var(--cat-kommunikation)"></span>
+                  <span style="height:30%;background:var(--cat-gaming)"></span>
+                </div><b>Mon</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:22%;background:var(--cat-produktiv)"></span>
+                  <span style="height:8%;background:var(--cat-browsing)"></span>
+                  <span style="height:12%;background:var(--cat-sozial)"></span>
+                </div><b>Tue</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:30%;background:var(--cat-produktiv)"></span>
+                  <span style="height:6%;background:var(--cat-lernen)"></span>
+                  <span style="height:8%;background:var(--cat-kommunikation)"></span>
+                </div><b>Wed</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:12%;background:var(--cat-produktiv)"></span>
+                  <span style="height:10%;background:var(--cat-sozial)"></span>
+                  <span style="height:22%;background:var(--cat-unterhaltung)"></span>
+                </div><b>Thu</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:18%;background:var(--cat-produktiv)"></span>
+                  <span style="height:36%;background:var(--cat-gaming)"></span>
+                </div><b>Fri</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:8%;background:var(--cat-design)"></span>
+                  <span style="height:40%;background:var(--cat-gaming)"></span>
+                  <span style="height:10%;background:var(--cat-sozial)"></span>
+                </div><b>Sat</b></div>
+                <div class="mini-day"><div class="mini-bar">
+                  <span style="height:16%;background:var(--cat-unterhaltung)"></span>
+                  <span style="height:14%;background:var(--cat-sozial)"></span>
+                  <span style="height:10%;background:var(--cat-kommunikation)"></span>
+                </div><b>Sun</b></div>
+              </div>
+              <div class="mini-stats">
+                <div class="mini-donut" style="background: conic-gradient(
+                  var(--cat-produktiv) 0% 34%,
+                  var(--cat-gaming) 34% 58%,
+                  var(--cat-unterhaltung) 58% 76%,
+                  var(--cat-sozial) 76% 90%,
+                  var(--cat-design) 90% 100%)">
+                  <div class="mini-donut-hole">
+                    <b>32 h</b>
+                    <span>this week</span>
+                  </div>
+                </div>
+                <div class="mini-legend">
+                  <div><span class="dot" style="background:var(--cat-produktiv)"></span>Productivity<b>34%</b></div>
+                  <div><span class="dot" style="background:var(--cat-gaming)"></span>Gaming<b>24%</b></div>
+                  <div><span class="dot" style="background:var(--cat-unterhaltung)"></span>Entertainment<b>18%</b></div>
+                  <div><span class="dot" style="background:var(--cat-sozial)"></span>Social media<b>14%</b></div>
+                  <div><span class="dot" style="background:var(--cat-design)"></span>Design<b>10%</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="visual-caption center">Example view. Zeitblick shows your own real categories, of course.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Teaser ══════════ -->
+    <div class="teaser-bar">
+      <div class="container teaser-inner">
+        <div>
+          <span class="eyebrow">Fresh from development</span>
+          <p>New: a built-in focus timer that actually blocks distractions. Zeitblick keeps growing.</p>
+        </div>
+        <a href="#roadmap" class="btn btn-pill-ghost btn-small">See the roadmap</a>
+      </div>
+    </div>
+
+    <!-- ══════════ Trust bar ══════════ -->
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div><b>100%</b><span>automatic, no timer</span></div>
+        <div><b>0</b><span>screenshots or keylogging</span></div>
+        <div><b>&lt; 5 min</b><span>setup</span></div>
+        <div><b>10</b><span>categories detected automatically</span></div>
+      </div>
+    </section>
+
+    <!-- ══════════ Founder quote ══════════ -->
+    <section class="quote-section">
+      <div class="container center">
+        <span class="eyebrow center">Why Zeitblick exists</span>
+        <blockquote>
+          “I simply wanted to see where my day disappears to, without logging
+          anything by hand. So I built it, for myself. Now Zeitblick is good enough
+          that I don't want to keep it to myself anymore.”
+        </blockquote>
+        <div class="quote-author">
+          <span class="avatar-initial">MP</span>
+          <div>
+            <b>Marlon Pilz</b>
+            <span>Creator of Zeitblick</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Mid CTA ══════════ -->
+    <section class="section download-cta">
+      <div class="container center">
+        <h2 class="section-title">Ready to see your time?</h2>
+        <p class="section-sub">One file, one double-click, installed. Runs entirely on your own PC.</p>
+        <div class="hero-actions center">
+          <a href="https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00" class="btn btn-pill-light btn-large">Try it free for 7 days</a>
+          <a href="mailto:smalox.der.beste@gmail.com?subject=Question%20about%20Zeitblick" class="btn btn-pill-ghost btn-large">Ask a question</a>
+        </div>
+        <p class="hero-note">Available for Windows · 7-day free trial</p>
+      </div>
+    </section>
+
+    <!-- ══════════ Problem ══════════ -->
+    <section class="section" id="problem">
+      <div class="container">
+        <span class="eyebrow center">The problem</span>
+        <h2 class="section-title center">Your time disappears, and you don't know where.</h2>
+        <div class="stacked-list">
+          <div class="stacked-card">
+            <span class="stacked-num">01</span>
+            <h3>The day is just gone</h3>
+            <p>Between work, a few browser tabs and quick distractions, you completely lose track of how much time really goes where.</p>
+            <a href="#preview" class="link-arrow">See an example →</a>
+          </div>
+          <div class="stacked-card">
+            <span class="stacked-num">02</span>
+            <h3>Timers fail because you're human</h3>
+            <p>Starting and stopping timers by hand works exactly until you forget once. After that the data is useless and you're back to square one.</p>
+            <a href="#features" class="link-arrow">How automatic tracking works →</a>
+          </div>
+          <div class="stacked-card">
+            <span class="stacked-num">03</span>
+            <h3>Surveillance feels wrong</h3>
+            <p>Most tracking tools are built for bosses: screenshots, keylogging, constant monitoring. You just want clarity for yourself, not surveillance.</p>
+            <a href="#privacy" class="link-arrow">How Zeitblick protects your privacy →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Solution ══════════ -->
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <span class="eyebrow center">The solution</span>
+        <h2 class="section-title center">Automatic time tracking you can trust</h2>
+        <p class="section-sub center">Less effort, more clarity, and data you can rely on, without changing how you work.</p>
+
+        <div class="stacked-list">
+          <div class="stacked-card">
+            <h3>Fully automatic, private tracking</h3>
+            <p>Zeitblick detects which program or website is active every 5 seconds, in the background, without you lifting a finger and without anything leaving your device.</p>
+            <a href="#preview" class="link-arrow">See the live preview →</a>
+          </div>
+          <div class="stacked-card">
+            <h3>Smart categories and website detection</h3>
+            <p>Over 10 categories, from productivity to gaming to social media, sort every activity automatically, including individual websites in your browser.</p>
+            <a href="#for-you" class="link-arrow">Who it's for →</a>
+          </div>
+          <div class="stacked-card">
+            <h3>Insights without end-of-day sorting</h3>
+            <p>A Google-Calendar-style week view plus bar charts, pie charts and top lists for day, week and month, all ready whenever you look.</p>
+            <a href="#pricing" class="link-arrow">See pricing →</a>
+          </div>
+        </div>
+
+        <div class="card-grid three feature-grid">
+          <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <h3>100% private, 100% local</h3>
+            <p>All data stays on your own device. No account required, no cloud.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>Your own categories</h3>
+            <p>Move any program or website to a different category with one click.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>It just runs</h3>
+            <p>Starts automatically with Windows and runs invisibly in the background.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Live preview ══════════ -->
+    <section class="section" id="preview">
+      <div class="container">
+        <span class="eyebrow center">Live preview</span>
+        <h2 class="section-title center">This is your day, before you even think about it.</h2>
+        <p class="section-sub center">No logging, no catching up in the evening. Every block appears on its own while you work, study or play.</p>
+
+        <div class="preview-card">
+          <div class="browser-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="browser-url">zeitblick.app · Friday</span>
+          </div>
+          <div class="cal-preview">
+            <div class="cal-axis">
+              <span style="top:0%">8 PM</span>
+              <span style="top:25%">4 PM</span>
+              <span style="top:50%">12 PM</span>
+              <span style="top:75%">8 AM</span>
+            </div>
+            <div class="cal-days" role="img" aria-label="Example day with colored category blocks">
+              <div class="cal-col">
+                <span class="blk" style="top:70%;height:18%;background:var(--cat-produktiv)">Code Editor</span>
+                <span class="blk" style="top:52%;height:14%;background:var(--cat-kommunikation)">Discord</span>
+                <span class="blk" style="top:20%;height:28%;background:var(--cat-gaming)">Valorant</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:66%;height:24%;background:var(--cat-produktiv)">VS Code</span>
+                <span class="blk" style="top:38%;height:10%;background:var(--cat-browsing)">GitHub</span>
+                <span class="blk" style="top:10%;height:18%;background:var(--cat-unterhaltung)">Spotify</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:60%;height:30%;background:var(--cat-lernen)">Udemy course</span>
+                <span class="blk" style="top:30%;height:16%;background:var(--cat-sozial)">Instagram</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:68%;height:20%;background:var(--cat-produktiv)">Excel</span>
+                <span class="blk" style="top:15%;height:36%;background:var(--cat-gaming)">Apex Legends</span>
+              </div>
+              <div class="cal-col cal-col-today">
+                <span class="blk" style="top:74%;height:16%;background:var(--cat-produktiv)">Zeitblick</span>
+                <span class="blk" style="top:48%;height:12%;background:var(--cat-design)">Figma</span>
+                <span class="blk" style="top:18%;height:22%;background:var(--cat-sozial)">TikTok</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:20%;height:50%;background:var(--cat-gaming)">Gaming night</span>
+              </div>
+              <div class="cal-col">
+                <span class="blk" style="top:40%;height:20%;background:var(--cat-unterhaltung)">Netflix</span>
+                <span class="blk" style="top:15%;height:18%;background:var(--cat-kommunikation)">WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="visual-caption center">Example view. Every block is detected, named and colored automatically.</p>
+      </div>
+    </section>
+
+    <!-- ══════════ Personas ══════════ -->
+    <section class="section section-alt" id="for-you">
+      <div class="container">
+        <span class="eyebrow center">Who is it for?</span>
+        <h2 class="section-title center">This is perfect for you if …</h2>
+        <p class="section-sub center">Zeitblick is built for individuals, not teams. If you want to know where your own time goes, you're in the right place.</p>
+
+        <div class="stacked-list">
+          <div class="stacked-card">
+            <h3>Students</h3>
+            <p>See how much time really goes into lectures, studying and distractions, without keeping a log yourself. Ideal before exams, to honestly see where you stand.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Freelancers and the self-employed</h3>
+            <p>No more guessing how long a project really took. Zeitblick runs quietly alongside you, so you can quote more accurately and plan your day realistically.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Gamers and streamers</h3>
+            <p>Detects individual games automatically, including launchers and anti-cheat helpers. See in black and white how gaming and productive time balance out.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Remote workers</h3>
+            <p>Without an office and a fixed structure, work and free time blur quickly. Zeitblick shows when you were really focused and when you weren't.</p>
+          </div>
+          <div class="stacked-card">
+            <h3>Anyone who wants more focus</h3>
+            <p>Sometimes it's enough to honestly see how much time social media and co. really eat. That alone often changes how you plan your day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Privacy ══════════ -->
+    <section class="privacy-section" id="privacy">
+      <div class="container">
+        <span class="eyebrow center light">Privacy first</span>
+        <h2 class="section-title center light">Visibility without surveillance.<br>Clarity without control.</h2>
+
+        <div class="privacy-grid">
+          <div class="privacy-card">
+            <div class="privacy-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>No screenshots, no keylogging</h3>
+            <p>Zeitblick only reads window metadata: the program name and the window title. Screen content is never recorded or stored.</p>
+          </div>
+          <div class="privacy-card">
+            <div class="privacy-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/></svg>
+            </div>
+            <h3>Your data stays with you</h3>
+            <p>No cloud, no account login for your tracking data. Everything lives locally on your own device, nobody else sees it.</p>
+          </div>
+          <div class="privacy-card">
+            <div class="privacy-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3>Built so you want to use it</h3>
+            <p>Zeitblick is not a monitoring tool. It only works because it helps you understand your own time, not because it watches you.</p>
+          </div>
+        </div>
+
+        <div class="chip-row center">
+          <a href="#faq" class="chip chip-light">More about privacy</a>
+          <a href="#features" class="chip chip-light">How tracking works</a>
+          <a href="#pricing" class="chip chip-light">See pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Roadmap ══════════ -->
+    <section class="section" id="roadmap">
+      <div class="container">
+        <span class="eyebrow center">What's next</span>
+        <h2 class="section-title center">Zeitblick keeps growing.</h2>
+        <div class="card-grid three">
+          <div class="roadmap-card">
+            <span class="badge-soon">✓ Available now</span>
+            <h3>🎯 Focus timer</h3>
+            <p>A built-in Pomodoro mode: focus for 25, 45, 60 or 90 minutes. Distracting apps and websites are minimized automatically during the session, with a short reminder and a break suggestion afterwards.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="badge-soon">✓ Available now</span>
+            <h3>⬇️ One click, always up to date</h3>
+            <p>Download a single file, open it, done. It installs itself with a shortcut and a proper uninstall entry, and checks for new versions on startup.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="badge-soon">On the list</span>
+            <h3>🖥️ macOS support</h3>
+            <p>Zeitblick currently runs on Windows. A macOS version is planned once the Windows version is fully polished.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Pricing ══════════ -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <span class="eyebrow center">Pricing</span>
+        <h2 class="section-title center">One plan. No fine print.</h2>
+        <p class="section-sub center">A fair yearly price instead of an expensive monthly subscription. The first 7 days are free.</p>
+
+        <div class="pricing-wrap">
+          <div class="pricing-card">
+            <span class="badge-soon">🚀 Early access</span>
+            <h3>Zeitblick</h3>
+            <div class="price"><span class="price-amount">€10</span><span class="price-period">/ year</span></div>
+            <p class="price-note">Less than €1 a month · 7-day free trial · cancel anytime</p>
+            <ul class="price-features">
+              <li>✓ Unlimited automatic tracking</li>
+              <li>✓ All 10 categories, including website detection</li>
+              <li>✓ Calendar, day, week and month views</li>
+              <li>✓ Focus mode that blocks distractions</li>
+              <li>✓ 100% local, private data</li>
+              <li>✓ All future features included</li>
+            </ul>
+
+            <a href="https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00" class="btn btn-pill-solid" style="width:100%;margin-bottom:14px">🔒 Try it free for 7 days</a>
+
+            <p class="waitlist-note">Secure payment via Stripe. You pay nothing today, the €10 is only charged after 7 days. Checkout shows the price in your local currency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <h2 class="section-title center">Frequently asked questions</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does it take screenshots of my screen?<span class="chev"></span></summary>
+            <p>No. Zeitblick only reads window metadata, meaning the program name and the window title. There are no screenshots, no keylogging and no screen recording, neither stored nor sent anywhere.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where does my data go?<span class="chev"></span></summary>
+            <p>Only onto your own device. There is no cloud and no account needed for your tracking data. Nobody but you sees what you did and when.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Zeitblick run on Mac?<span class="chev"></span></summary>
+            <p>Right now Zeitblick is built for Windows. A macOS version is on the roadmap once the Windows version is fully polished.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does it cost, and can I cancel anytime?<span class="chev"></span></summary>
+            <p>Zeitblick costs €10 per year, and the first 7 days are free. At checkout the price is shown in your local currency. You can cancel anytime, your subscription simply won't renew. Your tracked data stays on your device. <a href="cancel.html">How to cancel</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How accurate is the tracking?<span class="chev"></span></summary>
+            <p>Zeitblick checks the active window every 5 seconds and automatically detects idle time after 3 minutes without mouse or keyboard input. That's accurate enough for everyday life without drowning you in second-by-second detail.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if a category doesn't fit?<span class="chev"></span></summary>
+            <p>You can move any program or website to another category with one click. Your change applies immediately and permanently.</p>
+          </details>
+          <details class="faq-item">
+            <summary>My browser or Windows shows a warning. Is that dangerous?<span class="chev"></span></summary>
+            <p>No. Both the download warning ("isn't commonly downloaded") and "Windows protected your PC" appear because the file is new and not yet signed with a paid certificate, not because anything was found. Click "Keep" when downloading, and "More info" and then "Run anyway" when opening it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is the app in English?<span class="chev"></span></summary>
+            <p>Yes. Zeitblick is fully available in English and German, you can switch the language at the top of the sidebar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Final CTA ══════════ -->
+    <section class="final-cta">
+      <div class="container center">
+        <h2>Your time is your most valuable<br>resource. Treat it that way.</h2>
+        <p>Try Zeitblick free for 7 days and see where your time goes.</p>
+        <div class="hero-actions center">
+          <a href="https://buy.stripe.com/7sY9AU1iofcfcSf1mA2oE00" class="btn btn-pill-light btn-large">Try it free for 7 days</a>
+          <a href="mailto:smalox.der.beste@gmail.com?subject=Question%20about%20Zeitblick" class="btn btn-pill-ghost btn-large">Ask a question</a>
+        </div>
+        <div class="final-links">
+          <a href="#features">See features</a>
+          <a href="#preview">Live preview</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">◔</span>
+          <span class="logo-text">Zeitblick</span>
+        </a>
+        <p>Automatic, private time tracking for Windows.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#preview">Live preview</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>For you</h4>
+        <a href="#for-you">Who it's for</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+        <a href="../" hreflang="de">Deutsche Version</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="../impressum.html">Legal notice (German)</a>
+        <a href="../datenschutz.html">Privacy policy (German)</a>
+        <a href="cancel.html">Cancel subscription</a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-copy">&copy; 2026 Marlon Pilz · Zeitblick</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
